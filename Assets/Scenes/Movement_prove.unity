@@ -1111,13 +1111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99e0f7a0d754b94692185f9a21ff7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
   groundController: {fileID: 1874964909}
   dimensionBox: {x: 0.5, y: 0.5}
   isGround: 0
   allGround:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
 --- !u!61 &1332734231
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     // Controller of the player
 
     private float runSpeed = 450f;
-    public float jumpForce = 10f;
+    private float jumpForce = 400f;
 
     [SerializeField] private Transform groundController;
     [SerializeField] private Vector2 dimensionBox;
