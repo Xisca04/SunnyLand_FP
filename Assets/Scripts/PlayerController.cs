@@ -49,6 +49,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGround = Physics2D.OverlapBox(groundController.position, dimensionBox, 0, allGround);
+
+        _anim.SetBool("isGround", isGround);
+
         // que se mueva el personaje
         Movement(horizontalMov * Time.fixedDeltaTime, jumpForce);
 
