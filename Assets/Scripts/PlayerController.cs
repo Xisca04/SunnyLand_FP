@@ -5,31 +5,25 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Controller of the player
+    
+    private Animator _anim;
+    private Rigidbody2D _rigidbody;
 
     private float runSpeed = 450f;
     private float jumpForce = 400f;
 
     [SerializeField] private Transform groundController;
     [SerializeField] private Vector2 dimensionBox;
+   
     [SerializeField] private bool isGround;
     [SerializeField] private LayerMask allGround;
-
-    private bool canJump = false;
-
-    private Rigidbody2D _rigidbody;
-    private Animator _anim;
 
     private float horizontalMov = 0f;
     private bool lookRight = true;
    
-
     private void Awake()
     {
         _anim = GetComponent<Animator>();
-    }
-
-    private void Start()
-    {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -38,12 +32,6 @@ public class PlayerController : MonoBehaviour
         horizontalMov = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         _anim.SetFloat("Horizontal", Mathf.Abs(horizontalMov)); // se añade el valor absoluto para controlar mejor la animación
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            // Jump
-            canJump = true;
-        }
     }
 
     private void FixedUpdate()
@@ -52,13 +40,11 @@ public class PlayerController : MonoBehaviour
 
         _anim.SetBool("isGround", isGround);
 
-        // que se mueva el personaje
-        Movement(horizontalMov * Time.fixedDeltaTime, jumpForce);
-
-        canJump = false;
+        Movement(horizontalMov * Time.fixedDeltaTime);
+        Jump();
     }
 
-    private void Movement(float move, float jump)
+    private void Movement(float move)
     {
         Vector2 velocity = new Vector2(move, _rigidbody.velocity.y);
         _rigidbody.velocity = velocity;
@@ -73,8 +59,11 @@ public class PlayerController : MonoBehaviour
             // Girar personaje
             TurnAroundL();
         }
+    }
 
-        if(isGround && Input.GetKeyDown(KeyCode.Space))
+    private void Jump()
+    {
+        if (isGround && Input.GetKeyDown(KeyCode.Space))
         {
             isGround = false;
             _rigidbody.AddForce(new Vector2(0f, jumpForce));
