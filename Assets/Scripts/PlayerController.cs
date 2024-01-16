@@ -5,90 +5,67 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Controller of the player
-    
-    private Animator _anim;
-    private Rigidbody2D _rigidbody;
 
-    private float runSpeed = 450f;
-    private float jumpForce = 400f;
+    private Rigidbody2D _rigidbody2D;
+    private SpriteRenderer _spriteRenderer;
 
-    [SerializeField] private Transform groundController;
-    [SerializeField] private Vector2 dimensionBox;
-   
-    [SerializeField] private bool isGround;
-    [SerializeField] private LayerMask allGround;
+    private float horizontalInput;
+    private float runSpeed = 10f;
+    private float jumpForce = 8f;
 
-    private float horizontalMov = 0f;
-    private bool lookRight = true;
-   
+    private BoxCollider2D boxCollider2D;
+    [SerializeField] private LayerMask groundLayerMask;
+
+    // private bool isOnTheGround; DUBUJAR RAYO
+
     private void Awake()
     {
-        _anim = GetComponent<Animator>();
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider2D = GetComponent<BoxCollider2D>(); 
     }
 
     private void Update()
     {
-        horizontalMov = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        _anim.SetFloat("Horizontal", Mathf.Abs(horizontalMov)); // se añade el valor absoluto para controlar mejor la animación
+        // isOnTheGround = IsOnTheGound(); DUBUJAR RAYO
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround())
+        {
+            _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
+        }
     }
 
     private void FixedUpdate()
     {
-        isGround = Physics2D.OverlapBox(groundController.position, dimensionBox, 0, allGround);
-
-        _anim.SetBool("isGround", isGround);
-
-        Movement(horizontalMov * Time.fixedDeltaTime);
-        Jump();
+        Movement(horizontalInput * Time.fixedDeltaTime);
     }
 
     private void Movement(float move)
     {
-        Vector2 velocity = new Vector2(move, _rigidbody.velocity.y);
-        _rigidbody.velocity = velocity;
-        
-        if(move > 0f && !lookRight)
+        Vector2 velocity = new Vector2(runSpeed * horizontalInput, _rigidbody2D.velocity.y);
+        _rigidbody2D.velocity = velocity;
+
+        if (move > 0f)
         {
             // Girar personaje
-            TurnAroundR();
+            _spriteRenderer.flipX = false;
         }
-        else if(move < 0f && lookRight)
+        else if (move < 0f)
         {
             // Girar personaje
-            TurnAroundL();
+            _spriteRenderer.flipX = true;
         }
     }
 
-    private void Jump()
+    private bool IsOnTheGround() // impide el doble salto
     {
-        if (isGround && Input.GetKeyDown(KeyCode.Space))
-        {
-            isGround = false;
-            _rigidbody.AddForce(new Vector2(0f, jumpForce));
-        }
-    }
+        float extraHeightTest = 0.05f;
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
-    private void TurnAroundL() // Gira el sprite de dirección
-    {
-        lookRight = !lookRight;
-        Vector2 scale = transform.localScale;
-        scale.x = -10;
-        transform.localScale = scale;
-    }
+        bool isOnTheGround = raycastHit2D.collider != null;
 
-    private void TurnAroundR() // Gira el sprite de dirección
-    {
-        lookRight = !lookRight;
-        Vector2 scale = transform.localScale;
-        scale.x = 10;
-        transform.localScale = scale;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(groundController.position, dimensionBox);
+        return isOnTheGround;
     }
 }
