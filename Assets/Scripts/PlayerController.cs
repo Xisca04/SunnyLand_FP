@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
         Jump();
+        Crouch();
     }
 
     private void FixedUpdate()
@@ -69,6 +70,7 @@ public class PlayerController : MonoBehaviour
         else if(IsOnTheGround() == false)
         {
             _animator.SetBool("Run", false);
+            _animator.SetBool("Crouch", false);
             _animator.SetBool("Jump", true);
         }
 
@@ -90,4 +92,15 @@ public class PlayerController : MonoBehaviour
 
     // Agacharse
 
+    private void Crouch()
+    {
+        if (Input.GetButton("Fire1")) // Manteniendo botón dch ratón --> está agachado y puede moverse también
+        {
+            _animator.SetBool("Crouch", true);
+        }
+        else
+        {
+            _animator.SetBool("Crouch", false);
+        }
+    }
 }
