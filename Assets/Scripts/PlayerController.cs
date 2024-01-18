@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
 
     private float horizontalInput;
-
     private float runSpeed = 10f;
     private float jumpForce = 8f;
 
