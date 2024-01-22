@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
 
     private bool isCrouching = false;
+    private bool isJumping = false;
 
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
         if(IsOnTheGround() == true)
         {
             _animator.SetBool("Jump", false);
+            isJumping = false;
         }
         else if(IsOnTheGround() == false)
         {
@@ -76,6 +78,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround() && !isCrouching)
         {
+            isJumping = true;
+
             if (!isCrouching)
             {
                 _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
@@ -110,4 +114,14 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("Crouch", false);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && isJumping)
+        {
+            // Destruir al enemigo u otra lógica de muerte
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
