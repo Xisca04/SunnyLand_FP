@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayerMask;
 
+    private bool isCrouching = false;
 
     private void Awake()
     {
@@ -69,17 +70,20 @@ public class PlayerController : MonoBehaviour
         else if(IsOnTheGround() == false)
         {
             _animator.SetBool("Run", false);
-            _animator.SetBool("Crouch", false);
             _animator.SetBool("Jump", true);
+            _animator.SetBool("Crouch", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround())
+        if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround() && !isCrouching)
         {
-            _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
-        }
+            if (!isCrouching)
+            {
+                _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
+            }
+        } 
     }
 
-    private bool IsOnTheGround() // impide el doble salto -- Raycast
+    private bool IsOnTheGround() // Raycast
     {
         float extraHeightTest = 0.05f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
@@ -90,12 +94,16 @@ public class PlayerController : MonoBehaviour
     }
 
     // Agacharse
-
     private void Crouch()
     {
         if (Input.GetButton("Fire1")) // Manteniendo botón dch ratón --> está agachado y puede moverse también
         {
-            _animator.SetBool("Crouch", true);
+            isCrouching = !isCrouching;
+            
+            if (isCrouching)
+            {
+                _animator.SetBool("Crouch", true);
+            }
         }
         else
         {
