@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemies : MonoBehaviour
 {
@@ -14,6 +15,58 @@ public class Enemies : MonoBehaviour
     private const int PIG_SCORE = 70;
     private const int FROG_SCORE = 50;
 
+    // References
+    private NavMeshAgent _agent;
+
+    [SerializeField] private LayerMask playerLayer;
+
+    // PATRULLA - Variables
+    [SerializeField] private Transform[] waypoints;
+    [SerializeField] private int nextPoint;
+    private int totalWaypoints;
+    
+    private void Awake()
+    {
+        _agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Start()
+    {
+        totalWaypoints = waypoints.Length;
+        nextPoint = 1;
+    }
+
+    private void Update()
+    {
+        Patrol();
+    }
+
+    private void OnCollisionEnter(Collision otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Player"))
+        {
+            // Daño al player --> GAME OVER
+        }
+    }
+
+    private void Patrol()
+    {
+        if (Vector2.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
+        {
+            nextPoint++;
+
+            if (nextPoint == totalWaypoints)
+            {
+                nextPoint = 0;
+
+            }
+
+            transform.LookAt(waypoints[nextPoint].position);
+        }
+
+        _agent.SetDestination(waypoints[nextPoint].position);
+    }
+
     // RAYCAST --> detección colisión player solo si le salta por encima
     /*
     private bool IsOnTheGround() // impide el doble salto -- Raycast
@@ -26,12 +79,4 @@ public class Enemies : MonoBehaviour
         return isOnTheGround;
     }
     */
-
-    private void OnCollisionEnter(Collision otherCollider)
-    {
-        if (otherCollider.gameObject.CompareTag("Player"))
-        {
-            // Daño al player --> GAME OVER
-        }
-    }
 }

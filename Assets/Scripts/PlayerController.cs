@@ -115,6 +115,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        _animator.SetBool("Die", true);
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && isJumping)
