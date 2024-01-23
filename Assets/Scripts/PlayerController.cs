@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private bool isCrouching = false;
     private bool isJumping = false;
 
+    private bool isOnTheGround;
+
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+
+        isOnTheGround = IsOnTheGround();
 
         Jump();
         Crouch();
@@ -89,10 +93,15 @@ public class PlayerController : MonoBehaviour
 
     private bool IsOnTheGround() // Raycast
     {
-        float extraHeightTest = 0.05f;
+        float extraHeightTest = 0.02f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
         bool isOnTheGround = raycastHit2D.collider != null;
+
+        Color rayColor = isOnTheGround ? Color.green : Color.red; // Si está en el suelo el rayo será verde sino rojo
+
+        Debug.DrawRay(boxCollider2D.bounds.center,
+             Vector2.down * (boxCollider2D.bounds.extents.y + extraHeightTest), rayColor);
 
         return isOnTheGround;
     }

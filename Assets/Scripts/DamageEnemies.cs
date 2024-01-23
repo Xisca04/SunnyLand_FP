@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class DamageEnemies : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Score enemies when them die
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

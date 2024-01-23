@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
+    private PlayerController _playerController;
 
     private void Start()
     {
@@ -22,5 +23,6 @@ public class GameOver : MonoBehaviour
     public void GameOverLevels()
     {
         gameObject.SetActive(true);
+        _playerController.Die();
     }
 }
