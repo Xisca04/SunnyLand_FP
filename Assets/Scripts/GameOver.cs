@@ -10,6 +10,7 @@ public class GameOver : MonoBehaviour
     private void Start()
     {
         gameOverPanel.SetActive(false);
+        _playerController = GetComponent<PlayerController>();
     }
 
     private void OnTriggerEnter2D(Collider2D otherCollider)
@@ -22,7 +23,7 @@ public class GameOver : MonoBehaviour
 
     public void GameOverLevels()
     {
-        gameObject.SetActive(true);
+        gameOverPanel.SetActive(true);
         _playerController.Die();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PickCollectables : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class PickCollectables : MonoBehaviour
             Debug.Log("Gem picked");
             Destroy(other.gameObject);
             _score.AddScore(Score.GEM_SCORE);
-
         }
 
         if (other.CompareTag("Cherry"))
