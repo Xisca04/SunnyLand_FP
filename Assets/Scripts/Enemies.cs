@@ -7,14 +7,6 @@ public class Enemies : MonoBehaviour
 {
     // Enemies controller damage
 
-    // Score enemies
-    private const int EAGLE_SCORE = 150;
-    private const int BAT_SCORE = 100;
-    private const int VULTURE_SCORE = 100;
-    private const int OPOSSUM_SCORE = 70;
-    private const int PIG_SCORE = 70;
-    private const int FROG_SCORE = 50;
-
     // References
     private NavMeshAgent _agent;
 
