@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChestSystem : MonoBehaviour
 {
-    // Chest system -> collision --> scene
+    // Chest system -> collision --> animación --> panel --> scene
 
     // escenas
     // panel abrir o no cofre
