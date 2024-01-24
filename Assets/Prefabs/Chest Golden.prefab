@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6491913702539827632}
   - component: {fileID: 8597161717839717276}
   m_Layer: 0
-  m_Name: PF Village Props - Chest Golden
+  m_Name: Chest Golden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
