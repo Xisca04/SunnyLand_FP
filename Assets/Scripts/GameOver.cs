@@ -7,6 +7,8 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     private PlayerController _playerController;
 
+    private float animTimeDie = 1.5f;
+
     private void Start()
     {
         gameOverPanel.SetActive(false);
@@ -23,7 +25,15 @@ public class GameOver : MonoBehaviour
 
     public void GameOverLevels()
     {
-        gameOverPanel.SetActive(true);
         _playerController.Die();
+        StartCoroutine("GameOverCoroutine");
+    }
+
+    // Corrutina --> animaction die --> dsp 3 segundos aparece el panel game over
+
+    private IEnumerator GameOverCoroutine()
+    {
+        yield return new WaitForSeconds(animTimeDie);
+        gameOverPanel.SetActive(true);
     }
 }

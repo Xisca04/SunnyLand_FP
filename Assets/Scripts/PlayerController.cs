@@ -93,9 +93,7 @@ public class PlayerController : MonoBehaviour
             }
         } 
 
-        // Si no detecta el suelo se pone por defecto en la animación de salto
-        // Fall
-
+        // Fall animation
         if(_rigidbody2D.velocity.y < 0)
         {
             _animator.SetBool("Fall", true);
