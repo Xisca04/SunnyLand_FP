@@ -16,27 +16,13 @@ public class ChestSystem : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    private void Update()
+    
+    private void OnCollisionEnter(Collision other)
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Chest found");
             _anim.SetBool("IsOpened", true);
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            _anim.SetBool("IsOpened", false);
         }
     }
-    /*
-    private void OnCollisionEnter(Collision otherCollider)
-    {
-        if (otherCollider.gameObject.CompareTag("Player"))
-        {
-            _anim.SetBool("IsOpened", true);
-        }
-        else
-        {
-            _anim.SetBool("IsOpened", false);
-        }
-    }*/
 }

@@ -47,11 +47,13 @@ public class PlayerController : MonoBehaviour
 
     private void Movement(float move)
     {
+        // Idle
         Vector2 velocity = new Vector2(runSpeed * horizontalInput, _rigidbody2D.velocity.y);
         _rigidbody2D.velocity = velocity;
         _animator.SetBool("Run", false);
         _animator.SetBool("Jump", false);
 
+        // Run
         if (move > 0f)
         {
             // Girar personaje
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if(IsOnTheGround() == true)
         {
             _animator.SetBool("Jump", false);
+            _animator.SetBool("Fall", false);
             isJumping = false;
         }
         else if(IsOnTheGround() == false)
@@ -89,6 +92,18 @@ public class PlayerController : MonoBehaviour
                 _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
             }
         } 
+
+        // Si no detecta el suelo se pone por defecto en la animación de salto
+        // Fall
+
+        if(_rigidbody2D.velocity.y < 0)
+        {
+            _animator.SetBool("Fall", true);
+        }
+        else if (_rigidbody2D.velocity.y > 0)
+        {
+            _animator.SetBool("Fall", false);
+        }
     }
 
     private bool IsOnTheGround() // Raycast
@@ -129,7 +144,8 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("Die", true);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    // No funciona
+    void OnCollisionEnter2D(Collision2D collision) 
     {
         if (collision.gameObject.CompareTag("Enemy") && isJumping)
         {
