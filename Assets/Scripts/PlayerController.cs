@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsOnTheGround() // Raycast
     {
-        float extraHeightTest = 0.02f;
+        float extraHeightTest = 0.05f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
         bool isOnTheGround = raycastHit2D.collider != null;
@@ -140,16 +140,6 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetBool("Die", true);
-    }
-
-    // No funciona
-    void OnCollisionEnter2D(Collision2D collision) 
-    {
-        if (collision.gameObject.CompareTag("Enemy") && isJumping)
-        {
-            // Destruir al enemigo u otra lógica de muerte
-            Destroy(collision.gameObject);
-        }
     }
 
 }
