@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour
 
     private float animTimeDie = 1.5f;
 
+    // Añaadir --> coger altura del dead zone --> dejar al jugador en esa altura ---> animacion dead --> panel game over
+
     private void Start()
     {
         gameOverPanel.SetActive(false);
