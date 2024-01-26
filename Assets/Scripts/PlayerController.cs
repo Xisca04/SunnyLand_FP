@@ -70,13 +70,13 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if(IsOnTheGround() == true)
+        if (IsOnTheGround() == true)
         {
             _animator.SetBool("Jump", false);
             _animator.SetBool("Fall", false);
             isJumping = false;
         }
-        else if(IsOnTheGround() == false)
+        else if (IsOnTheGround() == false)
         {
             _animator.SetBool("Run", false);
             _animator.SetBool("Jump", true);
@@ -87,14 +87,13 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
 
-            if (!isCrouching)
-            {
-                _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
-            }
-        } 
+            _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
+
+        }
 
         // Fall animation
-        if(_rigidbody2D.velocity.y < 0)
+
+        if (_rigidbody2D.velocity.y < 0)
         {
             _animator.SetBool("Fall", true);
         }
@@ -102,11 +101,12 @@ public class PlayerController : MonoBehaviour
         {
             _animator.SetBool("Fall", false);
         }
-    }
 
+
+    }
     private bool IsOnTheGround() // Raycast
     {
-        float extraHeightTest = 0.05f;
+        float extraHeightTest = 0.03f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
         bool isOnTheGround = raycastHit2D.collider != null;
@@ -118,8 +118,9 @@ public class PlayerController : MonoBehaviour
 
         return isOnTheGround;
     }
-
+    
     // Agacharse
+    
     private void Crouch()
     {
         if (Input.GetButton("Fire1")) // Manteniendo botón dch ratón --> está agachado y puede moverse también
@@ -136,10 +137,10 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("Crouch", false);
         }
     }
-
+    
     public void Die()
     {
         _animator.SetBool("Die", true);
     }
-
+    
 }
