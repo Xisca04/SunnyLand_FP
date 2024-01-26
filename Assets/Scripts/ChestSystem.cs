@@ -17,12 +17,12 @@ public class ChestSystem : MonoBehaviour
     }
 
     
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Chest found");
-           // _anim.SetBool("IsOpened", true);
+           _anim.SetBool("IsOpened", true);
         }
     }
 }

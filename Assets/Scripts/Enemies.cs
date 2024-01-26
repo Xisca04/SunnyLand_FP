@@ -33,10 +33,11 @@ public class Enemies : MonoBehaviour
         Patrol();
     }
 
-    private void OnCollisionEnter(Collision otherCollider)
+    private void OnCollisionEnter2D(Collision2D otherCollision)
     {
-        if (otherCollider.gameObject.CompareTag("Player"))
+        if (otherCollision.gameObject.CompareTag("Player"))
         {
+            Debug.Log($"ahahahhaha player");
             // Daño al player --> GAME OVER
         }
     }
@@ -56,7 +57,7 @@ public class Enemies : MonoBehaviour
             transform.LookAt(waypoints[nextPoint].position);
         }
 
-        _agent.SetDestination(waypoints[nextPoint].position);
+        //_agent.SetDestination(waypoints[nextPoint].position);
     }
 
     // RAYCAST --> detección colisión player solo si le salta por encima
