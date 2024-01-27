@@ -15,9 +15,9 @@ public class PU_CorrectPath : MonoBehaviour
         correctPath.SetActive(false);
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        if (other.gameObject.CompareTag("Player"))
         {
             correctPath.SetActive(true);
         }

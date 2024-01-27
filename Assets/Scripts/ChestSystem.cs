@@ -11,9 +11,12 @@ public class ChestSystem : MonoBehaviour
     // animación apertura y cierre
     // envío a las escenas
     private Animator _anim;
+
+    [SerializeField] private GameObject panelAdvise;
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        panelAdvise.SetActive(false);
     }
 
     
@@ -23,6 +26,14 @@ public class ChestSystem : MonoBehaviour
         {
             Debug.Log("Chest found");
            _anim.SetBool("IsOpened", true);
+            // Añadir sitema partículas al abrir el cofre
+            StartCoroutine("PanelActive");
         }
+    }
+
+    private IEnumerator PanelActive()
+    {
+        yield return new WaitForSeconds(1);
+        panelAdvise.SetActive(true);
     }
 }
