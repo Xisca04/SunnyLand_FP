@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PU_CorrectPath : MonoBehaviour
@@ -20,6 +21,7 @@ public class PU_CorrectPath : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             correctPath.SetActive(true);
+            Destroy(this.gameObject);
         }
     }
 }
