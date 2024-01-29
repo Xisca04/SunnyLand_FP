@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameOver : MonoBehaviour
     private PlayerController _playerController;
 
     private float animTimeDie = 1.5f;
+    private float timeToRealoadLevel = 1.2f;
 
     // Añaadir --> coger altura del dead zone --> dejar al jugador en esa altura ---> animacion dead --> panel game over
 
@@ -37,5 +39,12 @@ public class GameOver : MonoBehaviour
     {
         yield return new WaitForSeconds(animTimeDie);
         gameOverPanel.SetActive(true);
+        yield return new WaitForSeconds(timeToRealoadLevel);
+        ReloadLevel();
+    }
+
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

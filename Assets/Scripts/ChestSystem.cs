@@ -19,7 +19,6 @@ public class ChestSystem : MonoBehaviour
         panelAdvise.SetActive(false);
     }
 
-    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -28,12 +27,26 @@ public class ChestSystem : MonoBehaviour
            _anim.SetBool("IsOpened", true);
             // Añadir sitema partículas al abrir el cofre
             StartCoroutine("PanelActive");
+            StartCoroutine("ChestClosed");
         }
+        
     }
 
     private IEnumerator PanelActive()
     {
         yield return new WaitForSeconds(1);
         panelAdvise.SetActive(true);
+    }
+
+    private IEnumerator ChestClosed()
+    {
+        yield return new WaitForSeconds(5);
+        panelAdvise.SetActive(false);
+        _anim.SetBool("IsOpened", false);
+    }
+
+    public void HidePanel()
+    {
+        panelAdvise.SetActive(false);
     }
 }
