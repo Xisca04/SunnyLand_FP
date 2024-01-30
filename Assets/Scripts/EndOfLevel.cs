@@ -9,10 +9,13 @@ public class EndOfLevel : MonoBehaviour
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
+    private Scene currentScene;
+
     private void Start()
     {
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        currentScene = SceneManager.GetActiveScene();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -27,9 +30,19 @@ public class EndOfLevel : MonoBehaviour
     {
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("Level1");
-        _gameManager.Load();
+        ChargePlayerCheckpoint();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
+    }
+
+    private void ChargePlayerCheckpoint()
+    {
+        if (PlayerPrefs.HasKey("PlayerPositionX") && PlayerPrefs.HasKey("PlayerPositionY"))
+        {
+            _gameManager.Load();
+            Debug.Log($"al checkpoint");
+            SceneManager.LoadScene("Level1");
+
+        }
     }
 
     private IEnumerator LoseLevel()

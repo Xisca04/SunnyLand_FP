@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
         PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
         PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
+        Debug.Log($"{pos}");
     }
 
     public void Load()
