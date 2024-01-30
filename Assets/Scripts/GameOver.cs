@@ -10,10 +10,10 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     private PlayerController _playerController;
 
-    private float animTimeDie = 1.5f;
+    private float animTimeDie = 1.0f;
     private float timeToRealoadLevel = 1.2f;
 
-    // Añaadir --> coger altura del dead zone --> dejar al jugador en esa altura ---> animacion dead --> panel game over
+    // Añadir --> coger altura del dead zone --> dejar al jugador en esa altura ---> animacion dead --> panel game over
 
     private void Start()
     {
@@ -31,27 +31,27 @@ public class GameOver : MonoBehaviour
 
     public void GameOverLevels()
     {
-        _playerController.Die();
         StartCoroutine("GameOverCoroutine");
     }
 
-    // Corrutina --> animaction die --> dsp 3 segundos aparece el panel game over
-
     private IEnumerator GameOverCoroutine()
     {
+        _playerController.Die();
         yield return new WaitForSeconds(animTimeDie);
         gameOverPanel.SetActive(true);
         yield return new WaitForSeconds(timeToRealoadLevel);
-        PassedCheckpoint();
+        ReachedCheckpoint();
+        gameOverPanel.SetActive(false);
     }
 
-    private void PassedCheckpoint()
+    private void ReachedCheckpoint()
     {
         if (_checkpoint.activatedCheckpoint == true)
         {
+            _playerController.DieOff(); // NO FUNCIONA --> REVISAR
             _gameManager.Load();
         }
-        else
+        else if (_checkpoint.activatedCheckpoint == false)
         {
             ReloadLevel(); // desdel inicio
         }

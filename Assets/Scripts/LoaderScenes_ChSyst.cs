@@ -26,4 +26,9 @@ public class LoaderScenes_ChSyst : MonoBehaviour
     {
         SceneManager.LoadScene("C_Ice_Level");
     }
+
+    public void LoadSecondLevel()
+    {
+        SceneManager.LoadScene("Level2");
+    }
 }

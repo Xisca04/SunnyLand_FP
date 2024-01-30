@@ -13,6 +13,7 @@ public class ChestSystem : MonoBehaviour
     private Animator _anim;
 
     [SerializeField] private GameObject panelAdvise;
+    [SerializeField] private GameObject rightAdvise;
     private void Start()
     {
         _anim = GetComponent<Animator>();
@@ -48,5 +49,6 @@ public class ChestSystem : MonoBehaviour
     public void HidePanel()
     {
         panelAdvise.SetActive(false);
+        rightAdvise.SetActive(false);
     }
 }

@@ -14,25 +14,13 @@ public class Checkpoint : MonoBehaviour
     {
         activatedCheckpoint = false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log($"Has pasado por el checkpoint");
             activatedCheckpoint = true;
             _gameManager.Save();
         }
     }
-
-    /*
-    private bool CheckpointActivated()
-    {
-        if (activatedCheckpoint == true)
-        {
-            return true;
-        }
-
-        return false;
-    }
-    */
 }

@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D boxCollider2D;
-    private Animator _animator;
+    public Animator _animator;
 
     private float horizontalInput;
     public float runSpeed = 10f;
@@ -17,10 +17,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayerMask;
 
-    private bool isCrouching = false;
+    private bool isCrouching = true;
     private bool isJumping = false;
 
-    private bool isOnTheGround;
+    private bool isOnTheGround = true;
 
     private void Awake()
     {
@@ -140,6 +140,11 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetBool("Die", true);
+    }
+
+    public void DieOff()
+    {
+        _animator.SetBool("Die", false);
     }
 
     public Vector3 GetPosition() // devuelve la posición del player en ese momento
