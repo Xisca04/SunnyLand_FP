@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndOfLevel : MonoBehaviour
 {
+    [SerializeField] private GameManager _gameManager;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
@@ -27,6 +28,7 @@ public class EndOfLevel : MonoBehaviour
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("Level1");
+        _gameManager.Load();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
     }
 

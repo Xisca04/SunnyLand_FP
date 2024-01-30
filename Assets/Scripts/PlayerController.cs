@@ -120,7 +120,6 @@ public class PlayerController : MonoBehaviour
     }
     
     // Agacharse
-    
     private void Crouch()
     {
         if (Input.GetButton("Fire1")) // Manteniendo botón dch ratón --> está agachado y puede moverse también
@@ -142,5 +141,15 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Die", true);
     }
-    
+
+    public Vector3 GetPosition() // devuelve la posición del player en ese momento
+    {
+        return transform.position;
+    }
+
+    public void SetPosition(Vector3 newPosition) // tomará la posición del player y la cambiará por una que entrará como parámetro
+    {
+        transform.position = newPosition;
+    }
+
 }

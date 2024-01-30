@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    [SerializeField] private GameManager _gameManager;
+    [SerializeField] private Checkpoint _checkpoint;
     [SerializeField] private GameObject gameOverPanel;
     private PlayerController _playerController;
 
@@ -40,7 +42,19 @@ public class GameOver : MonoBehaviour
         yield return new WaitForSeconds(animTimeDie);
         gameOverPanel.SetActive(true);
         yield return new WaitForSeconds(timeToRealoadLevel);
-        ReloadLevel();
+        PassedCheckpoint();
+    }
+
+    private void PassedCheckpoint()
+    {
+        if (_checkpoint.activatedCheckpoint == true)
+        {
+            _gameManager.Load();
+        }
+        else
+        {
+            ReloadLevel(); // desdel inicio
+        }
     }
 
     private void ReloadLevel()
