@@ -25795,6 +25795,10 @@ PrefabInstance:
       value: Eagle
       objectReference: {fileID: 0}
     - target: {fileID: 3178328786496477833, guid: 0ee514ec9742a2b4a938359fca381cb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178328786496477833, guid: 0ee514ec9742a2b4a938359fca381cb3, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}

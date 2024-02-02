@@ -20,6 +20,11 @@ public class Enemies : MonoBehaviour
     private void Awake()
     {
         _agent = GetComponent<NavMeshAgent>();
+       
+        if (_agent == null)
+        {
+            Debug.LogError("No se encontró el componente NavMeshAgent en este objeto.");
+        }
     }
 
     private void Start()
@@ -44,7 +49,7 @@ public class Enemies : MonoBehaviour
 
     private void Patrol()
     {
-        if (Vector2.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
+        if (Vector3.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
         {
             nextPoint++;
 
@@ -55,6 +60,12 @@ public class Enemies : MonoBehaviour
             }
 
             transform.LookAt(waypoints[nextPoint].position);
+        }
+       
+        if (_agent != null && _agent.isActiveAndEnabled)
+        {
+            // Asegúrate de que estás llamando SetDestination correctamente.
+            _agent.SetDestination(waypoints[nextPoint].position);
         }
 
         //_agent.SetDestination(waypoints[nextPoint].position);
