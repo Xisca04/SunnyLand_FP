@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chests_scenes/C_Ice_Level.unity
     guid: 09996748b99b06546842de2dd1bfcd8a
+  - enabled: 1
+    path: Assets/Scenes/Final_Level.unity
+    guid: 0b564f3434d368847a8d42820f18154a
   m_configObjects: {}
