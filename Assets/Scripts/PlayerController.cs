@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 10f;
     private float jumpForce = 8f;
 
+    [SerializeField] private float rebotejump = 5f;
+
     [SerializeField] private LayerMask groundLayerMask;
 
     private bool isCrouching = true;
@@ -83,7 +85,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("Crouch", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround() && !isCrouching)
+        if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround())
         {
             isJumping = true;
 
@@ -118,7 +120,12 @@ public class PlayerController : MonoBehaviour
 
         return isOnTheGround;
     }
-    
+
+    public void ReboteJump()
+    {
+        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, rebotejump);
+    }
+
     // Agacharse
     private void Crouch()
     {

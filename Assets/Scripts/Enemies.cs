@@ -65,10 +65,8 @@ public class Enemies : MonoBehaviour
         if (_agent != null && _agent.isActiveAndEnabled)
         {
             // Asegúrate de que estás llamando SetDestination correctamente.
-            _agent.SetDestination(waypoints[nextPoint].position);
+            //_agent.SetDestination(waypoints[nextPoint].position);
         }
-
-        //_agent.SetDestination(waypoints[nextPoint].position);
     }
 
     // RAYCAST --> detección colisión player solo si le salta por encima
