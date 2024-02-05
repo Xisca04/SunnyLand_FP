@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 410551124}
   - component: {fileID: 410551126}
   - component: {fileID: 410551127}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Small-platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &493816859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1544,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &554819862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,7 +1994,7 @@ GameObject:
   - component: {fileID: 927921443}
   - component: {fileID: 927921445}
   - component: {fileID: 927921446}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Long-platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32225,7 +32225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelAdvise: {fileID: 11932531}
-  rightAdvise: {fileID: 11932531}
 --- !u!1 &1079862427
 GameObject:
   m_ObjectHideFlags: 0
@@ -39749,7 +39748,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelAdvise: {fileID: 274227571}
-  rightAdvise: {fileID: 11932531}
 --- !u!1 &1875092133
 GameObject:
   m_ObjectHideFlags: 0
@@ -40433,9 +40431,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 373639865720399515, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
       propertyPath: m_Name
       value: Chest Golden
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8228609967701604441, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -21,8 +21,14 @@ public class FinalChest : MonoBehaviour
             Debug.Log("Chest found");
             _anim.SetBool("IsOpened", true);
             // Añadir sitema partículas al abrir el cofre
-            SceneManager.LoadScene("C_Final_Level");
+            StartCoroutine("SendPlayer");
         }
 
+    }
+
+    private IEnumerator SendPlayer()
+    {
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene("C_Final_Level");
     }
 }

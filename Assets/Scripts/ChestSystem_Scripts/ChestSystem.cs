@@ -13,11 +13,10 @@ public class ChestSystem : MonoBehaviour
     private Animator _anim;
 
     [SerializeField] private GameObject panelAdvise;
-    [SerializeField] private GameObject rightAdvise;
     private void Start()
     {
         _anim = GetComponent<Animator>();
-        panelAdvise.SetActive(false);
+        HidePanel();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -46,9 +45,8 @@ public class ChestSystem : MonoBehaviour
         _anim.SetBool("IsOpened", false);
     }
 
-    public void HidePanel()
+    private void HidePanel()
     {
         panelAdvise.SetActive(false);
-        rightAdvise.SetActive(false);
     }
 }

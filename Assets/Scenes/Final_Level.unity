@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
       propertyPath: m_Name
-      value: Chest Golden
+      value: Chest Golden - Final
       objectReference: {fileID: 0}
     - target: {fileID: 8228609967701604441, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
       propertyPath: m_LocalPosition.x
