@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6655339752327510783}
   - component: {fileID: -8524424641326291315}
   - component: {fileID: -4706201984433907202}
+  - component: {fileID: 2403614855324742854}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,6 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99e0f7a0d754b94692185f9a21ff7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  runSpeed: 10
+  rebotejump: 5
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -166,6 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d4fba8bcbc4a64a893a0e848725785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameManager: {fileID: 0}
+  _checkpoint: {fileID: 2403614855324742854}
   gameOverPanel: {fileID: 0}
 --- !u!114 &6655339752327510783
 MonoBehaviour:
@@ -236,3 +242,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b19de07f9bee2046b7290a16bdec743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2403614855324742854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452963684519124804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8a50ecd2b681949a0c42d7d0fe5cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameManager: {fileID: 0}
+  activatedCheckpoint: 0

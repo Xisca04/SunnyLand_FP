@@ -7,9 +7,23 @@ public class CountdownTimer : MonoBehaviour
 {
     // Countdown for the final and the bonus level
 
-    [SerializeField] private float timeLeft = 10f;
+    public static CountdownTimer Instance { get; private set; }  // Singleton
+
+    public float timeLeft = 10f;
     [SerializeField] private TextMeshProUGUI timerText;
     private bool timerOn = false;
+
+    public float timeToAdd = 5f;
+
+    private void Awake() // Singleton
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("There is more than one Instance Timer");
+        }
+
+        Instance = this;
+    }
 
     private void Start()
     {
