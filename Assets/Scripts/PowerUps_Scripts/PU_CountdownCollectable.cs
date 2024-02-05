@@ -9,6 +9,7 @@ public class PU_CountdownCollectable : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     [SerializeField] private GameObject gems;
+    private float colorTransparency = 0.05f;
 
     private void Start()
     {
@@ -19,7 +20,10 @@ public class PU_CountdownCollectable : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            _spriteRenderer.color = new Color(0, 0, 0);
+            Material material = _spriteRenderer.material;
+            Color color = material.color;
+            color.a = colorTransparency;
+            material.color = color;
             StartCoroutine("CountdownGems");
         }
     }
