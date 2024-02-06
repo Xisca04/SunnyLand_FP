@@ -27,7 +27,7 @@ public class EndOfLevel : MonoBehaviour
     {
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        //VolverAPrimeraEscena();
+        VolverAPrimeraEscena();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
     }
 
@@ -38,7 +38,6 @@ public class EndOfLevel : MonoBehaviour
             _gameManager.Load();
             Debug.Log($"al checkpoint");
             SceneManager.LoadScene("Level1");
-
         }
     }
 
@@ -50,7 +49,7 @@ public class EndOfLevel : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
-   /*
+   
     // Llamar a esta función para volver a la primera escena desde la segunda escena
     private void VolverAPrimeraEscena()
     {
@@ -59,12 +58,11 @@ public class EndOfLevel : MonoBehaviour
 
         // Cambiar a la primera escena
         SceneManager.LoadScene(escenaAnterior);
-
-        // Recuperar la posición guardada del jugador y establecerla
-        Vector2 playerPosition = new Vector2(PlayerPrefs.GetFloat("PlayerPositionX"), PlayerPrefs.GetFloat("PlayerPositionY"));
-        GameObject.FindGameObjectWithTag("Player").transform.position = playerPosition;
+        
+        _gameManager.Load();
+        
     }
-   */
+   
 }
 
 

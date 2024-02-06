@@ -14,20 +14,19 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            Save();
+            //Save();
+            Load();
         }
     }
 
     public void Save()
     {
-        
-            Debug.Log($"Save");
-            // GUARDAR POSICIÓN --> Accedemos a player prefs hacemos persitentes 2 datos --> posX y posY del Player --> SE HAN DE HACER SI O SI POR SEPARADAS
-            Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
-            PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
-            PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
-            Debug.Log($"{pos}");
-        
+        Debug.Log($"Save");
+        // GUARDAR POSICIÓN --> Accedemos a player prefs hacemos persitentes 2 datos --> posX y posY del Player --> SE HAN DE HACER SI O SI POR SEPARADAS
+        Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
+        PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
+        PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
+        Debug.Log($"{pos}");
     }
 
     public void Load()

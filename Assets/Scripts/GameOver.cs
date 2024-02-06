@@ -48,7 +48,6 @@ public class GameOver : MonoBehaviour
     {
         if (_checkpoint.activatedCheckpoint == true)
         {
-            _playerController.DieOff(); // NO FUNCIONA --> REVISAR
             _gameManager.Load();
         }
         else if (_checkpoint.activatedCheckpoint == false)
