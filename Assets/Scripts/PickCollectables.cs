@@ -8,10 +8,12 @@ public class PickCollectables : MonoBehaviour
     // Player pick collectables
 
     private Score _score;
+    [SerializeField] private GameObject _feedbackGem;
 
     private void Awake()
     {
         _score = GetComponent<Score>();
+        _feedbackGem.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,6 +22,7 @@ public class PickCollectables : MonoBehaviour
         {
             Debug.Log("Gem picked");
             Destroy(other.gameObject);
+            StartCoroutine("StartFeedbackVFX"); // HACER QUE EL PREFAB DE LOS ITEMS TENGA EL VFX Y ACCEDER A ESTE CO IN CHILDREN PARA NO TENER QUE ASIGNAR CADA VFX
             _score.AddScore(Score.GEM_SCORE);
         }
 
@@ -29,5 +32,12 @@ public class PickCollectables : MonoBehaviour
             Destroy(other.gameObject);
             _score.AddScore(Score.CHERRY_SCORE);
         }
+    }
+
+    private IEnumerator StartFeedbackVFX()
+    {
+        _feedbackGem.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        _feedbackGem.SetActive(false);
     }
 }
