@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2319740375489543569}
   - component: {fileID: 3125701682149155922}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,8 @@ GameObject:
   - component: {fileID: 5191157136582429676}
   - component: {fileID: 3752461235220911944}
   - component: {fileID: 2646983012681527644}
-  m_Layer: 0
+  - component: {fileID: 8126552139479890159}
+  m_Layer: 3
   m_Name: Chest Golden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,3 +199,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1093686, y: 0.93818295}
   m_EdgeRadius: 0
+--- !u!114 &8126552139479890159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228609967701604440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f2955bbc4f3cf46b96e559de9ed042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelAdvise: {fileID: 0}

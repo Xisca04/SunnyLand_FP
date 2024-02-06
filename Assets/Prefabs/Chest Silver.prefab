@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4870467451445703409}
   - component: {fileID: 7559001194643514342}
   - component: {fileID: 3211170202661904916}
+  - component: {fileID: 5994245543155231292}
   m_Layer: 0
   m_Name: Chest Silver
   m_TagString: Untagged
@@ -198,3 +199,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1046133, y: 0.9714691}
   m_EdgeRadius: 0
+--- !u!114 &5994245543155231292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767440392873869637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f2955bbc4f3cf46b96e559de9ed042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelAdvise: {fileID: 0}

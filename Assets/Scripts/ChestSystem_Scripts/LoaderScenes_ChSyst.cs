@@ -36,4 +36,9 @@ public class LoaderScenes_ChSyst : MonoBehaviour
     {
         SceneManager.LoadScene("Final_Level");
     }
+
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }

@@ -6,10 +6,6 @@ public class ChestSystem : MonoBehaviour
 {
     // Chest system -> collision --> animación --> panel --> scene
 
-    // escenas
-    // panel abrir o no cofre
-    // animación apertura y cierre
-    // envío a las escenas
     private Animator _anim;
 
     [SerializeField] private GameObject panelAdvise;
@@ -27,9 +23,18 @@ public class ChestSystem : MonoBehaviour
            _anim.SetBool("IsOpened", true);
             // Añadir sitema partículas al abrir el cofre
             StartCoroutine("PanelActive");
-            StartCoroutine("ChestClosed");
         }
         
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Chest closed");
+            StartCoroutine("ChestClosed");
+        }
+
     }
 
     private IEnumerator PanelActive()
@@ -41,11 +46,11 @@ public class ChestSystem : MonoBehaviour
     private IEnumerator ChestClosed()
     {
         yield return new WaitForSeconds(3);
-        panelAdvise.SetActive(false);
+        HidePanel();
         _anim.SetBool("IsOpened", false);
     }
 
-    private void HidePanel()
+    public void HidePanel()
     {
         panelAdvise.SetActive(false);
     }

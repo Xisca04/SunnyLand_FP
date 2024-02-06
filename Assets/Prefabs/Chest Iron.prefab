@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 869999506479744697}
   - component: {fileID: 412204942743249802}
   - component: {fileID: 2722327881595421564}
+  - component: {fileID: 1152776194136222914}
   m_Layer: 0
   m_Name: Chest Iron
   m_TagString: Untagged
@@ -114,6 +115,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.099052, y: 0.9716995}
   m_EdgeRadius: 0
+--- !u!114 &1152776194136222914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902808002663609613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f2955bbc4f3cf46b96e559de9ed042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelAdvise: {fileID: 0}
 --- !u!1 &4699230655043021774
 GameObject:
   m_ObjectHideFlags: 0

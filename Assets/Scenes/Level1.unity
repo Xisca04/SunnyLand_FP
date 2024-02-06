@@ -1544,7 +1544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &554819862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32207,24 +32207,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5071508354711645702, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
   m_PrefabInstance: {fileID: 1044206431}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1066008711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8767440392873869637, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
-  m_PrefabInstance: {fileID: 1197446475}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1066008716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066008711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f2955bbc4f3cf46b96e559de9ed042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelAdvise: {fileID: 11932531}
 --- !u!1 &1079862427
 GameObject:
   m_ObjectHideFlags: 0
@@ -32493,6 +32475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5994245543155231292, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
+      propertyPath: panelAdvise
+      value: 
+      objectReference: {fileID: 11932531}
     - target: {fileID: 8767440392873869636, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.69
@@ -32540,10 +32526,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8767440392873869637, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1066008716}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
 --- !u!1001 &1206497381
 PrefabInstance:
@@ -39730,24 +39713,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2531245367647325067, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
   m_PrefabInstance: {fileID: 1714075659}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1715760133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
+--- !u!114 &1715760138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8126552139479890159, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
   m_PrefabInstance: {fileID: 8797354707801901126}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1715760138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715760133}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1f2955bbc4f3cf46b96e559de9ed042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelAdvise: {fileID: 274227571}
 --- !u!1 &1875092133
 GameObject:
   m_ObjectHideFlags: 0
@@ -40435,6 +40411,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8126552139479890159, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
+      propertyPath: panelAdvise
+      value: 
+      objectReference: {fileID: 274227571}
     - target: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
       propertyPath: m_Name
       value: Chest Golden
@@ -40486,10 +40466,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8228609967701604440, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1715760138}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b9b13533568644fa118a22454ffb7d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
