@@ -10,14 +10,24 @@ public class GameManager : MonoBehaviour
     private const string PLAYER_POS_X = "PlayerPositionX";
     private const string PLAYER_POS_Y = "PlayerPositionY";
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Save();
+        }
+    }
+
     public void Save()
     {
-        Debug.Log($"Save");
-        // GUARDAR POSICIÓN --> Accedemos a player prefs hacemos persitentes 2 datos --> posX y posY del Player --> SE HAN DE HACER SI O SI POR SEPARADAS
-        Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
-        PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
-        PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
-        Debug.Log($"{pos}");
+        
+            Debug.Log($"Save");
+            // GUARDAR POSICIÓN --> Accedemos a player prefs hacemos persitentes 2 datos --> posX y posY del Player --> SE HAN DE HACER SI O SI POR SEPARADAS
+            Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
+            PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
+            PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
+            Debug.Log($"{pos}");
+        
     }
 
     public void Load()
