@@ -8,9 +8,15 @@ public class Collectables : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            Destroy(gameObject);
+            StartCoroutine("VFXOn");
         }
+    }
+
+    private IEnumerator VFXOn()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        Destroy(gameObject);
     }
 }
