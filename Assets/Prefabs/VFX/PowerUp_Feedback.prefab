@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1954409452317247232}
   - component: {fileID: 1659752698026549991}
   m_Layer: 0
-  m_Name: Item-feedback-2
+  m_Name: PowerUp_Feedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
