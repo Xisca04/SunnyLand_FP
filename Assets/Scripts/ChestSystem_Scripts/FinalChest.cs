@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class FinalChest : MonoBehaviour
 {
     // Chest system -> collision --> animación --> scene --> panel explicativo
-
+    [SerializeField] private ParticleSystem _particles;
     private Animator _anim;
 
     private void Start()
     {
         _anim = GetComponent<Animator>();
+        _particles.Stop();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -20,7 +21,7 @@ public class FinalChest : MonoBehaviour
         {
             Debug.Log("Chest found");
             _anim.SetBool("IsOpened", true);
-            // Añadir sitema partículas al abrir el cofre
+            _particles.Play();
             StartCoroutine("SendPlayer");
         }
 
