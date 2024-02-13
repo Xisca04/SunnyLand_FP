@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chests_scenes/C_Final_Level.unity
     guid: 8ca5010e93248ff4181f80fe248f0eaf
+  - enabled: 1
+    path: Assets/Scenes/Bonus_Level.unity
+    guid: acdf3565dc3188246885bbbc8a802a29
   m_configObjects: {}

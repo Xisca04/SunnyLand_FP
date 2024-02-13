@@ -9,7 +9,7 @@ public class EnemyChase : MonoBehaviour
 
     private NavMeshAgent _agent;
 
-    private float visionRange = 20f;
+    private float visionRange = 5.0f;
     private bool playerInVisionRange;
     
     [SerializeField] private LayerMask playerLayer;
@@ -31,7 +31,7 @@ public class EnemyChase : MonoBehaviour
 
     private void Update() // Se movera hacia el destino
     {
-        Vector2 pos = transform.position;
+        Vector3 pos = transform.position;
         playerInVisionRange = Physics.CheckSphere(pos, visionRange, playerLayer);
 
         if (!playerInVisionRange)
@@ -47,7 +47,7 @@ public class EnemyChase : MonoBehaviour
 
     private void Patrol()
     {
-        if (Vector2.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
+        if (Vector3.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
         {
             nextPoint++;
 
