@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            //Save();
             Load();
         }
     }

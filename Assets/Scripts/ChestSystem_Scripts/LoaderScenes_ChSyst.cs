@@ -15,7 +15,7 @@ public class LoaderScenes_ChSyst : MonoBehaviour
     public void LoadChaseScene()
     {
         // Guardar la escena actual antes de cambiar
-       // PlayerPrefs.SetString("Level1", SceneManager.GetActiveScene().name);
+        // PlayerPrefs.SetString("Level1", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("C_First_Level");
     }
 

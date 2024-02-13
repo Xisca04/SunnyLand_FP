@@ -27,11 +27,11 @@ public class EndOfLevel : MonoBehaviour
     {
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        ChargePlayerCheckpoint();
+        ChargePlayerToCheckpoint();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
     }
 
-    private void ChargePlayerCheckpoint()
+    private void ChargePlayerToCheckpoint()
     {
         if (PlayerPrefs.HasKey("PlayerPositionX") && PlayerPrefs.HasKey("PlayerPositionY"))
         {
