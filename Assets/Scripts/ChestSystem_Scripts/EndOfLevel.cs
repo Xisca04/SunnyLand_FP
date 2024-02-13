@@ -7,12 +7,12 @@ public class EndOfLevel : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private GameObject winPanel;
-    [SerializeField] private GameObject losePanel;
+    // [SerializeField] private GameObject losePanel;
 
     private void Start()
     {
         winPanel.SetActive(false);
-        losePanel.SetActive(false);
+        // losePanel.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -27,7 +27,7 @@ public class EndOfLevel : MonoBehaviour
     {
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        VolverAPrimeraEscena();
+        ChargePlayerCheckpoint();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
     }
 
@@ -35,34 +35,26 @@ public class EndOfLevel : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("PlayerPositionX") && PlayerPrefs.HasKey("PlayerPositionY"))
         {
-            _gameManager.Load();
             Debug.Log($"al checkpoint");
             SceneManager.LoadScene("Level1");
+            
+            if(SceneManager.GetActiveScene().name == "Level1")
+            {
+                _gameManager.Load();
+            }
+            
         }
     }
 
+    /*
     private IEnumerator LoseLevel()
     {
-        losePanel.SetActive(true);
+        // losePanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         // Vuelve a empezar el nivel de nuevo
         SceneManager.LoadScene("Level1");
     }
-
-   
-    // Llamar a esta función para volver a la primera escena desde la segunda escena
-    private void VolverAPrimeraEscena()
-    {
-        // Obtener el nombre de la escena anterior
-        string escenaAnterior = PlayerPrefs.GetString("Level1");
-
-        // Cambiar a la primera escena
-        SceneManager.LoadScene(escenaAnterior);
-        
-        _gameManager.Load();
-        
-    }
-   
+    */
 }
 
 

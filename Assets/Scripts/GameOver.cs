@@ -42,6 +42,8 @@ public class GameOver : MonoBehaviour
         yield return new WaitForSeconds(timeToRealoadLevel);
         ReachedCheckpoint();
         gameOverPanel.SetActive(false);
+        _playerController.DieOff();
+        Debug.Log("No muerto, sigue corriendo");
     }
 
     private void ReachedCheckpoint()

@@ -21,7 +21,7 @@ public class ChestSystem : MonoBehaviour
         {
             Debug.Log("Chest found");
            _anim.SetBool("IsOpened", true);
-            // Añadir sitema partículas al abrir el cofre
+            // sistema partículas 
             StartCoroutine("PanelActive");
         }
         
