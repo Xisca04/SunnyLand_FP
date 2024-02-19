@@ -28,7 +28,7 @@ public class PauseMenu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void PauseGame()
+    private void PauseGame()
     {
         Time.timeScale = 0f;
         Show();
@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     // Game's configuration if the Pause Menu is Off
-    public void ResumeGame()
+    private void ResumeGame()
     {
         Time.timeScale = 1f;
         Hide();
