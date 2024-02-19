@@ -14,20 +14,16 @@ public class LoaderScenes_ChSyst : MonoBehaviour
 
     public void LoadChaseScene()
     {
-        // Guardar la escena actual antes de cambiar
-        // PlayerPrefs.SetString("Level1", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("C_First_Level");
     }
 
     public void LoadCaveScene()
     {
-        //
         SceneManager.LoadScene("C_Cave_Level");
     }
 
     public void LoadIceScene()
     {
-        //
         SceneManager.LoadScene("C_Ice_Level");
     }
 
@@ -45,4 +41,7 @@ public class LoaderScenes_ChSyst : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    // Guardar la escena actual antes de cambiar
+    // PlayerPrefs.SetString("Level1", SceneManager.GetActiveScene().name);
 }
