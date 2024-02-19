@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class PU_CorrectPath : MonoBehaviour
 {
-    // Power Up that shows the path to the right chest
+    // Power Up that shows the direction to the right chest
 
     // Colllision con el player --> mostrar un objeto
 
-    [SerializeField] private GameObject correctPath;
+    [SerializeField] private GameObject correctDirection;
 
     private void Start()
     {
-        correctPath.SetActive(false);
+        correctDirection.SetActive(false);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
@@ -21,7 +21,7 @@ public class PU_CorrectPath : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            correctPath.SetActive(true);
+            correctDirection.SetActive(true);
             StartCoroutine("VFXOn");
         }
     }

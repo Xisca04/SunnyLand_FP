@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class DeathEnemiesController : MonoBehaviour
 {
-    
+    [SerializeField] private PlayerController _playerController;
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            foreach (ContactPoint2D contactPoint in other.contacts)
+            // Verifica si el jugador está saltando
+             _playerController = other.gameObject.GetComponent<PlayerController>();
+            
+            if (_playerController.isJumping == true)
             {
-                if (contactPoint.normal.y <= 0.9)
-                {
-                    other.gameObject.GetComponent<PlayerController>().ReboteJump();
-                    Debug.Log($"muerte enemigo");
-                    Destroy(gameObject);
-                }
+                // El jugador está saltando, por lo que eliminamos al enemigo
+                Destroy(gameObject);
             }
         }
 

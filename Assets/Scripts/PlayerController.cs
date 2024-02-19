@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayerMask;
 
     private bool isCrouching = true;
-    private bool isJumping = false;
+    public bool isJumping = false;
 
     private bool isOnTheGround = true;
 
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Jump()
+    public void Jump()
     {
         if (IsOnTheGround() == true)
         {

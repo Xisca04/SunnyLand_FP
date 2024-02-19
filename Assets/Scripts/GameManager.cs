@@ -12,11 +12,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Load();
-        }
-
         if(Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.DeleteAll();

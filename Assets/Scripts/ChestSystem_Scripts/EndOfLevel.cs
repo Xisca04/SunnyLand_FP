@@ -37,7 +37,6 @@ public class EndOfLevel : MonoBehaviour
         {
             Debug.Log($"al checkpoint");
             SceneManager.LoadScene("Level1");
-            
         }
     }
 

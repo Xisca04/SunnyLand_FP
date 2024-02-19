@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 844047100436575110}
   - component: {fileID: 3094666591460745509}
   - component: {fileID: 6666410953670604068}
+  - component: {fileID: -1714361692481886912}
   m_Layer: 0
   m_Name: slimer1
   m_TagString: Untagged
@@ -198,3 +199,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.41, y: 0.38}
   m_EdgeRadius: 0
+--- !u!114 &-1714361692481886912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683927143138372667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5594946a8249e0c41a3e424de0ddab98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}

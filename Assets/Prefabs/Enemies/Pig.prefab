@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 661470635349379058}
   - component: {fileID: 6274900696820496841}
   - component: {fileID: -6180552168105191773}
+  - component: {fileID: -8736537147117575874}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Enemy
@@ -180,3 +181,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8736537147117575874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475880117828211841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5594946a8249e0c41a3e424de0ddab98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}

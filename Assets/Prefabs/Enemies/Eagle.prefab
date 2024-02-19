@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7832068132870914957}
   - component: {fileID: 1572289700560074892}
   - component: {fileID: 759611392123509990}
-  - component: {fileID: 4017254113575965297}
+  - component: {fileID: -8419485557915759608}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: Enemy
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.43, y: 2.77, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00904797, y: 0.012925632}
@@ -204,7 +204,7 @@ NavMeshAgent:
   m_BaseOffset: 0.26
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &4017254113575965297
+--- !u!114 &-8419485557915759608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,13 +213,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3178328786496477833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d54a29a4e0bd8c48915c7d38a56844f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5594946a8249e0c41a3e424de0ddab98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  nextPoint: 0
+  _playerController: {fileID: 0}

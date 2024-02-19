@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4926117648956894845}
   - component: {fileID: 7879726396586662941}
   - component: {fileID: -3394664060355744824}
+  - component: {fileID: -670850695940837109}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -180,3 +181,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-670850695940837109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591756538152543353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5594946a8249e0c41a3e424de0ddab98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}
