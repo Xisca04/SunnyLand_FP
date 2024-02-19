@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
         {
             Load();
         }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     public void Save()
@@ -30,17 +35,10 @@ public class GameManager : MonoBehaviour
 
     public void Load()
     {
-        if (PlayerPrefs.HasKey(PLAYER_POS_X))
-        {
-            Debug.Log($"Load");
-            // Position
-            float x = PlayerPrefs.GetFloat(PLAYER_POS_X);
-            float y = PlayerPrefs.GetFloat(PLAYER_POS_Y);
-            _playerController.SetPosition(new Vector3(x, y, 0));
-        }
-        else
-        {
-            Debug.LogError("No Data");
-        }
+        Debug.Log($"Load");
+        // Position
+        float x = PlayerPrefs.GetFloat(PLAYER_POS_X,0);
+        float y = PlayerPrefs.GetFloat(PLAYER_POS_Y, 0);
+        _playerController.SetPosition(new Vector3(x, y, 0));
     }
 }

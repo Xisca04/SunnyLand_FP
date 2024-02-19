@@ -38,11 +38,6 @@ public class EndOfLevel : MonoBehaviour
             Debug.Log($"al checkpoint");
             SceneManager.LoadScene("Level1");
             
-            if(SceneManager.GetActiveScene().name == "Level1")
-            {
-                _gameManager.Load();
-            }
-            
         }
     }
 
