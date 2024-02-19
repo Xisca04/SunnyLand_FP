@@ -9,6 +9,7 @@ TagManager:
   - Gem
   - Cherry
   - Checkpoint
+  - Apple
   layers:
   - Default
   - TransparentFX
