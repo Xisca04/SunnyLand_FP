@@ -15,7 +15,7 @@ public class DeathController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) // detecta si es un enemigo a lo que toca por debajo de él, pero si toca este que no sea desde arriba el enemigo mata al player
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy_Easy") || collision.gameObject.CompareTag("Enemy_Medium") || collision.gameObject.CompareTag("Enemy_Hard"))
         {
             // Obtener la dirección del contacto
             ContactPoint2D contact = collision.contacts[0];
@@ -33,7 +33,19 @@ public class DeathController : MonoBehaviour
             {
                 _playerController.ReboteJump();
                 collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage();
-                //Destroy(collision.gameObject); // Destruye ambos 
+
+                if (collision.gameObject.CompareTag("Enemy_Easy"))
+                {
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_EASY_SCORE);
+                }
+                else if (collision.gameObject.CompareTag("Enemy_Medium"))
+                {
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_MEDIUM_SCORE);
+                }
+                else if (collision.gameObject.CompareTag("Enemy_Hard"))
+                {
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_HARD_SCORE);
+                }
             }
             else // Si el jugador choca con el enemigo desde los lados o por debajo, recibe daño
             {
@@ -41,4 +53,5 @@ public class DeathController : MonoBehaviour
             }
         }
     }
+
 }

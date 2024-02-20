@@ -11,6 +11,9 @@ TagManager:
   - Checkpoint
   - Apple
   - DeathPoint
+  - Enemy_Easy
+  - Enemy_Medium
+  - Enemy_Hard
   layers:
   - Default
   - TransparentFX

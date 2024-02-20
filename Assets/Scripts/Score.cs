@@ -14,12 +14,9 @@ public class Score : MonoBehaviour
     public const int CHERRY_SCORE = 50;
 
     // Score enemies
-    public const int EAGLE_SCORE = 150;
-    public const int BAT_SCORE = 100;
-    public const int VULTURE_SCORE = 100;
-    public const int OPOSSUM_SCORE = 70;
-    public const int PIG_SCORE = 70;
-    public const int SLIME_SCORE = 50;
+    public const int ENEMY_HARD_SCORE = 150;
+    public const int ENEMY_MEDIUM_SCORE = 70;
+    public const int ENEMY_EASY_SCORE = 50;
 
     private void Start()
     {
