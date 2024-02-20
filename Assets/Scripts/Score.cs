@@ -19,7 +19,7 @@ public class Score : MonoBehaviour
     public const int VULTURE_SCORE = 100;
     public const int OPOSSUM_SCORE = 70;
     public const int PIG_SCORE = 70;
-    public const int FROG_SCORE = 50;
+    public const int SLIME_SCORE = 50;
 
     private void Start()
     {

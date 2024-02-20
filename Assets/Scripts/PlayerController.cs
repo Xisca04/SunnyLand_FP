@@ -38,8 +38,6 @@ public class PlayerController : MonoBehaviour
 
         isOnTheGround = IsOnTheGround();
         
-        isJumping = Input.GetKeyDown(KeyCode.Space);
-        
         Jump();
         Crouch();
     }
@@ -150,7 +148,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("Crouch", false);
         }
     }
-    
+
     public void Die()
     {
         _animator.SetBool("Die", true);
