@@ -25,12 +25,12 @@ public class RecollectSystem : MonoBehaviour
 
         if (other.gameObject.CompareTag("FinishRace"))
         {
-            if (applesCollected > 10)
+            if (applesCollected >= 10 && CountdownTimer.Instance.timeLeft > 0)
             {
                 // && TIMER NO A CERO
                 Debug.Log($"nivel ganado");
             }
-            else if (applesCollected < 10)
+            else if (CountdownTimer.Instance.timeLeft <= 0)
             {
                 // && TIMER  A CERO
                 Debug.Log($"nivel perdido");
