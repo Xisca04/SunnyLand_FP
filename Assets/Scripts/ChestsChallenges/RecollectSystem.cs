@@ -29,11 +29,13 @@ public class RecollectSystem : MonoBehaviour
             {
                 // && TIMER NO A CERO
                 Debug.Log($"nivel ganado");
+                CountdownTimer.Instance.timeLeft = 0;
             }
             else if (CountdownTimer.Instance.timeLeft <= 0)
             {
                 // && TIMER  A CERO
                 Debug.Log($"nivel perdido");
+                CountdownTimer.Instance.timeLeft = 0;
             }
         }
     }
