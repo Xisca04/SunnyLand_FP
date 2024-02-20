@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
 
         isOnTheGround = IsOnTheGround();
-
+        
+        isJumping = Input.GetKeyDown(KeyCode.Space);
+        
         Jump();
         Crouch();
     }
@@ -119,6 +121,11 @@ public class PlayerController : MonoBehaviour
              Vector2.down * (boxCollider2D.bounds.extents.y + extraHeightTest), rayColor);
 
         return isOnTheGround;
+    }
+
+    public bool CheckJump()
+    {
+        return isJumping;
     }
 
     public void ReboteJump()

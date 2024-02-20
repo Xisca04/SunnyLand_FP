@@ -10,6 +10,7 @@ TagManager:
   - Cherry
   - Checkpoint
   - Apple
+  - DeathPoint
   layers:
   - Default
   - TransparentFX

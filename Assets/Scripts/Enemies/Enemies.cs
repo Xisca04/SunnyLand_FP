@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,16 +10,13 @@ public class Enemies : MonoBehaviour
 
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float speed;
-    [SerializeField] private LayerMask groundLayerMask;
-
-    private BoxCollider2D boxCollider2D;
+    
     private int indexWaypointActual = 0;
     private int nextWaypoint = 1;
     private bool waypointsOrder = true;
 
     private void Start()
     {
-        boxCollider2D = GetComponent<BoxCollider2D>();
         // Inicializar la posición del enemigo al primer waypoint
         transform.position = waypoints[indexWaypointActual].position;
     }
@@ -26,7 +24,6 @@ public class Enemies : MonoBehaviour
     private void Update()
     {
         EnemyMovement();
-        //TakeDamage();
     }
 
     private void EnemyMovement()
@@ -66,29 +63,5 @@ public class Enemies : MonoBehaviour
         nuevaEscala.x *= -1; // la escala se mutiplica por -1 así el sprite da la vuelta
         transform.localScale = nuevaEscala;
     }
-
-
-    // RAYCAST --> detección colisión player solo si le salta por encima
-    /*
-    private void TakeDamage() // Raycast to detect if the player killed it
-    {
-        float extraHeightTest = 0.05f;
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.up, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
-
-        bool isTookDamage = raycastHit2D.collider != null;
-
-        if (isTookDamage)
-        {
-            Debug.Log($"death enemigo");
-        }
-        else
-        {
-            Debug.Log($"Damage al player");
-        }
-        
-
-       
-    }
-    */
-
+    
 }
