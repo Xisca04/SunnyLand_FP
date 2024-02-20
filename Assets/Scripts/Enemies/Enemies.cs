@@ -7,78 +7,88 @@ public class Enemies : MonoBehaviour
 {
     // Enemies controller damage
 
-    // References
-    private NavMeshAgent _agent;
-
-    [SerializeField] private LayerMask playerLayer;
-
-    // PATRULLA - Variables
     [SerializeField] private Transform[] waypoints;
-    [SerializeField] private int nextPoint;
-    private int totalWaypoints;
-    
-    private void Awake()
-    {
-        _agent = GetComponent<NavMeshAgent>();
-       
-        if (_agent == null)
-        {
-            Debug.LogError("No se encontró el componente NavMeshAgent en este objeto.");
-        }
-    }
+    [SerializeField] private float speed;
+    [SerializeField] private LayerMask groundLayerMask;
+
+    private BoxCollider2D boxCollider2D;
+    private int indexWaypointActual = 0;
+    private int nextWaypoint = 1;
+    private bool waypointsOrder = true;
 
     private void Start()
     {
-        totalWaypoints = waypoints.Length;
-        nextPoint = 1;
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        // Inicializar la posición del enemigo al primer waypoint
+        transform.position = waypoints[indexWaypointActual].position;
     }
 
     private void Update()
     {
-        Patrol();
+        EnemyMovement();
+        //TakeDamage();
     }
 
-    private void OnCollisionEnter2D(Collision2D otherCollision)
+    private void EnemyMovement()
     {
-        if (otherCollision.gameObject.CompareTag("Player"))
+        if (waypointsOrder && nextWaypoint + 1 >= waypoints.Length)
         {
-            Debug.Log($"ahahahhaha player");
-            // Daño al player --> GAME OVER
+            waypointsOrder = false;
         }
-    }
 
-    private void Patrol()
-    {
-        if (Vector3.Distance(transform.position, waypoints[nextPoint].position) < 2.5f)
+        if (!waypointsOrder && nextWaypoint <= 0)
         {
-            nextPoint++;
+            waypointsOrder = true;
+        }
 
-            if (nextPoint == totalWaypoints)
+        if (Vector2.Distance(transform.position, waypoints[nextWaypoint].position) < 0.1f)
+        {
+            if (waypointsOrder)
             {
-                nextPoint = 0;
-
+                nextWaypoint += 1;
+                TurnAroundSprite();
             }
+            else
+            {
+                nextWaypoint -= 1;
+                TurnAroundSprite();
+            }
+        }
 
-            transform.LookAt(waypoints[nextPoint].position);
-        }
-       
-        if (_agent != null && _agent.isActiveAndEnabled)
-        {
-            // Asegúrate de que estás llamando SetDestination correctamente.
-            //_agent.SetDestination(waypoints[nextPoint].position);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[nextWaypoint].position, speed * Time.deltaTime);
     }
+
+
+    void TurnAroundSprite()
+    {
+        // Invertir la escala en el eje X para girar el sprite
+        Vector2 nuevaEscala = transform.localScale;
+        nuevaEscala.x *= -1; // la escala se mutiplica por -1 así el sprite da la vuelta
+        transform.localScale = nuevaEscala;
+    }
+
 
     // RAYCAST --> detección colisión player solo si le salta por encima
     /*
-    private bool IsOnTheGround() // impide el doble salto -- Raycast
+    private void TakeDamage() // Raycast to detect if the player killed it
     {
         float extraHeightTest = 0.05f;
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
+        RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.up, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
-        bool isOnTheGround = raycastHit2D.collider != null;
+        bool isTookDamage = raycastHit2D.collider != null;
 
-        return isOnTheGround;
+        if (isTookDamage)
+        {
+            Debug.Log($"death enemigo");
+        }
+        else
+        {
+            Debug.Log($"Damage al player");
+        }
+        
+
+       
     }
     */
+
 }
