@@ -13,31 +13,30 @@ public class RecollectSystem : MonoBehaviour
         applesCollected = 0;
     }
 
-    private void Update()
-    {
-        if (applesCollected > 10)
-        {
-            // && TIMER NO A CERO
-            Debug.Log($"nivel ganado");
-        }
-        else if (applesCollected < 10)
-        {
-            // && TIMER  A CERO
-            Debug.Log($"nivel perdido");
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Apple"))
         {
-            
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<AppleRaceLevel>().DestroyApple();
             applesCollected++;
             UpdateApplesUI();
         }
-    }
 
+        if (other.gameObject.CompareTag("FinishRace"))
+        {
+            if (applesCollected > 10)
+            {
+                // && TIMER NO A CERO
+                Debug.Log($"nivel ganado");
+            }
+            else if (applesCollected < 10)
+            {
+                // && TIMER  A CERO
+                Debug.Log($"nivel perdido");
+            }
+        }
+    }
 
    private void UpdateApplesUI()
    {
