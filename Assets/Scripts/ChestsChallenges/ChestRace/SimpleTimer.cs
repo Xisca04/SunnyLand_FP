@@ -9,7 +9,7 @@ public class SimpleTimer : MonoBehaviour
 
     public static SimpleTimer Instance { get; private set; }  // Singleton
 
-    public float timeLeft = 10f;
+    public float timeLeft = 60f;
     [SerializeField] private TextMeshProUGUI timerText;
     private bool timerOn = false;
 

@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Levels/Level1.unity
     guid: 62afab40e7508504c8a73686af36d8eb
   - enabled: 1
     path: Assets/Scenes/Chests_scenes/C_First_Level.unity
     guid: daad75858a858f94faa98c500925b559
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Levels/Level2.unity
     guid: deabc135f62b36244b0e4abd15813b1e
   - enabled: 1
     path: Assets/Scenes/Chests_scenes/C_Cave_Level.unity
@@ -24,13 +24,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Chests_scenes/C_Race_Level.unity
     guid: 09996748b99b06546842de2dd1bfcd8a
   - enabled: 1
-    path: Assets/Scenes/Final_Level.unity
+    path: Assets/Scenes/Levels/Final_Level.unity
     guid: 0b564f3434d368847a8d42820f18154a
   - enabled: 1
     path: Assets/Scenes/Chests_scenes/C_Final_Level.unity
     guid: 8ca5010e93248ff4181f80fe248f0eaf
   - enabled: 1
-    path: Assets/Scenes/Bonus_Level.unity
+    path: Assets/Scenes/Levels/Bonus_Level.unity
     guid: acdf3565dc3188246885bbbc8a802a29
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
