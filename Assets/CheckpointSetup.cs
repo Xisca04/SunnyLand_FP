@@ -10,6 +10,4 @@ public class CheckpointSetup : MonoBehaviour
     {
         _gameManager.Load();
     }
-
-    
 }
