@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bonus_Level.unity
     guid: acdf3565dc3188246885bbbc8a802a29
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: e0e1abc76ec8c23428f5a369a54abd50
   m_configObjects: {}
