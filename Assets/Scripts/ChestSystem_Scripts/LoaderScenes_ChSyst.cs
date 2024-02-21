@@ -22,9 +22,9 @@ public class LoaderScenes_ChSyst : MonoBehaviour
         SceneManager.LoadScene("C_Cave_Level");
     }
 
-    public void LoadIceScene()
+    public void LoadRaceScene()
     {
-        SceneManager.LoadScene("C_Ice_Level");
+        SceneManager.LoadScene("C_Race_Level");
     }
 
     public void LoadSecondLevel()

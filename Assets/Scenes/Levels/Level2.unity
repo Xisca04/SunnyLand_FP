@@ -1126,6 +1126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-death-2
       objectReference: {fileID: 0}
+    - target: {fileID: 1709994629589597173, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8768878713048887261, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -25996,6 +26000,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opossum
       objectReference: {fileID: 0}
+    - target: {fileID: 2941357717427747834, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27568,6 +27576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy-death-2
       objectReference: {fileID: 0}
+    - target: {fileID: 1709994629589597173, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8768878713048887261, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -27680,7 +27692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8767440392873869637, guid: 6775d33b1c2882748af563fa2f8261c4, type: 3}
       propertyPath: m_Name
-      value: Chest Silver
+      value: Chest Silver - Cave
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29110,6 +29122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opossum (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2941357717427747834, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7933079193240746868, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
     m_RemovedGameObjects: []
@@ -29160,7 +29176,7 @@ GameObject:
   - component: {fileID: 942305713}
   - component: {fileID: 942305712}
   m_Layer: 5
-  m_Name: Advise Panel Level Ice
+  m_Name: Advise Panel Level Race
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30811,7 +30827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8526998150825130225, guid: f2e326b13b4694a458d12a39cd46d350, type: 3}
       propertyPath: m_Name
-      value: Chest Wooden
+      value: Chest Wooden - Race
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32039,6 +32055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opossum (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2941357717427747834, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7933079193240746868, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
     m_RemovedGameObjects: []
@@ -32162,7 +32182,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1184652683}
         m_TargetAssemblyTypeName: LoaderScenes_ChSyst, Assembly-CSharp
-        m_MethodName: LoadIceScene
+        m_MethodName: LoadRaceScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42323,6 +42343,10 @@ PrefabInstance:
     - target: {fileID: 1709994629589597173, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
       propertyPath: m_Name
       value: Enemy-death-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709994629589597173, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8768878713048887261, guid: ffd55af8c13a5ad4b9c805571619a9f6, type: 3}
       propertyPath: m_LocalScale.x
