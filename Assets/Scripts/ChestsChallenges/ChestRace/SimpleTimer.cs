@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
-public class CountdownTimer : MonoBehaviour
+public class SimpleTimer : MonoBehaviour
 {
-    // Countdown for the final and the bonus level
+    // Simple Timer
 
-    public static CountdownTimer Instance { get; private set; }  // Singleton
+    public static SimpleTimer Instance { get; private set; }  // Singleton
 
     public float timeLeft = 10f;
     [SerializeField] private TextMeshProUGUI timerText;
     private bool timerOn = false;
 
-    public float timeToAdd = 5f;
-
     private void Awake() // Singleton
     {
         if (Instance != null)
         {
-            Debug.LogError("There is more than one Instance Countdown Timer");
+            Debug.LogError("There is more than one Instance Simple Timer");
         }
 
         Instance = this;
