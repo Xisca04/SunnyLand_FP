@@ -30,15 +30,16 @@ public class PauseMenu : MonoBehaviour
 
     private void PauseGame()
     {
-        Time.timeScale = 0f;
+        Time.fixedDeltaTime = 0f;
         Show();
         // SoundManager.PlaySound(SoundManager.Sound.ButtonClick);
+        SimpleTimer.Instance.timeLeft = 0;
     }
 
     // Game's configuration if the Pause Menu is Off
     private void ResumeGame()
     {
-        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 1f; // TAMPOCO FUNCIONA CON TIME SCALE
         Hide();
         // SoundManager.PlaySound(SoundManager.Sound.ButtonOver);
     }
