@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 377388623652486949}
   - component: {fileID: 7196140864828615881}
   - component: {fileID: 184783256413651268}
-  - component: {fileID: 844047100436575110}
   - component: {fileID: 3094666591460745509}
   - component: {fileID: 6666410953670604068}
   - component: {fileID: -1714361692481886912}
+  - component: {fileID: 8943279751579514677}
   m_Layer: 0
   m_Name: slimer1
   m_TagString: Enemy_Easy
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b7a9b30e19b516f4e8f485ca2d26cbbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.41, y: 0.38}
@@ -110,23 +110,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &844047100436575110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5683927143138372667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1626fececbb9ad44ea1e5b1f1db81f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  minDistance: 1.5
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!50 &3094666591460745509
 Rigidbody2D:
   serializedVersion: 4
@@ -186,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000008940697, y: -0.08096573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41, y: 0.38}
+  m_Size: {x: 0.31931895, y: 0.21806854}
   m_EdgeRadius: 0
 --- !u!114 &-1714361692481886912
 MonoBehaviour:
@@ -211,3 +194,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5594946a8249e0c41a3e424de0ddab98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8943279751579514677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683927143138372667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d54a29a4e0bd8c48915c7d38a56844f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 2

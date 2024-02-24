@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
             _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
 
+           // SoundManager.PlaySound(SoundManager.Sound.Jump);
         }
 
         // Fall animation
@@ -152,6 +153,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetBool("Die", true);
+       // SoundManager.Instance.PlaySound(SoundManager.Instance.Sound.Die);
     }
 
     public void DieOff()
