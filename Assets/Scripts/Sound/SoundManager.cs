@@ -5,15 +5,6 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //sound manager
-    
-    public class SoundAudioClip
-    {
-        public Sound sound;
-        public AudioClip audioClip;
-    }
-
-    public SoundAudioClip[] soundAudioClipArray;
-
     public enum Sound
     {
         Cherry,
@@ -21,6 +12,10 @@ public class SoundManager : MonoBehaviour
         PU_Path,
         PU_Countdown_On,
         PU_Countdown_Off,
+        Enemy_Death,
+        Run,
+        Jump,
+        Die
     }
 
     private AudioSource audioSource;
@@ -37,7 +32,7 @@ public class SoundManager : MonoBehaviour
 
     private AudioClip GetAudioClipFromSound(Sound sound)
     {
-        foreach (SoundAudioClip soundAudioClip in soundAudioClipArray)
+        foreach (SoundAudioClips.SoundAudioClip soundAudioClip in SoundAudioClips.Instance.soundAudioClipArray)
         {
             if (soundAudioClip.sound == sound)
             {
