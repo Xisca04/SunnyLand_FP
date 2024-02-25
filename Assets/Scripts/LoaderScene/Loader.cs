@@ -22,7 +22,7 @@ public static class Loader
         C_First_Level,
         C_Cave_Level,
         C_Race_Level,
-        C_Final_level,
+        C_Final_Level,
         Bonus_Level,
         CreditsScene,
 
