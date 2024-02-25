@@ -62,11 +62,11 @@ public class MainMenuManager : MonoBehaviour
 
     private void GoToLevel1()
     {
-        SceneManager.LoadScene("Level1");
+        Loader.Load(Loader.Scene.Level1);
     }
 
     private void GoToBonusLevel()
     {
-        SceneManager.LoadScene("Bonus_Level");
+        Loader.Load(Loader.Scene.Bonus_Level);
     }
 }

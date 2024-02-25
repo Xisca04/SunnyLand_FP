@@ -30,6 +30,6 @@ public class FinalChest : MonoBehaviour
     private IEnumerator SendPlayer()
     {
         yield return new WaitForSeconds(0.3f);
-        SceneManager.LoadScene("C_Final_Level");
+        Loader.Load(Loader.Scene.C_Final_Level);
     }
 }

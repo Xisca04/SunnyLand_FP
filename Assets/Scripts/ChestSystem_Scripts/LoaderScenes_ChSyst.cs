@@ -9,37 +9,37 @@ public class LoaderScenes_ChSyst : MonoBehaviour
 
     public void LoadFinalScene()
     {
-        SceneManager.LoadScene("C_Final_Level");
+        Loader.Load(Loader.Scene.C_Final_Level);
     }
 
     public void LoadChaseScene()
     {
-        SceneManager.LoadScene("C_First_Level");
+        Loader.Load(Loader.Scene.C_First_Level);
     }
 
     public void LoadCaveScene()
     {
-        SceneManager.LoadScene("C_Cave_Level");
+        Loader.Load(Loader.Scene.C_Cave_Level);
     }
 
     public void LoadRaceScene()
     {
-        SceneManager.LoadScene("C_Race_Level");
+        Loader.Load(Loader.Scene.C_Race_Level);
     }
 
     public void LoadSecondLevel()
     {
-        SceneManager.LoadScene("Level2");
+        Loader.Load(Loader.Scene.Level2);
     }
 
     public void LoadFinalLevel()
     {
-        SceneManager.LoadScene("Final_Level");
+        Loader.Load(Loader.Scene.Final_Level);
     }
 
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene("Level1");
+        Loader.Load(Loader.Scene.Level1);
     }
 
     // Guardar la escena actual antes de cambiar
