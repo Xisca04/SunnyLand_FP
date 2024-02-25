@@ -10,9 +10,12 @@ public class PU_CorrectPath : MonoBehaviour
     // Colllision con el player --> mostrar un objeto
 
     [SerializeField] private GameObject correctDirection;
+    [SerializeField] private AudioClip powerUpSound;
+    private AudioSource _audiosource;
 
     private void Start()
     {
+        _audiosource = GetComponent<AudioSource>();
         correctDirection.SetActive(false);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
@@ -31,6 +34,7 @@ public class PU_CorrectPath : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
         Destroy(gameObject.GetComponent<BoxCollider2D>()); // Destruye el collider para que el player no colisione con este hasta que se detrya todo el objeto
         gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
+        _audiosource.PlayOneShot(powerUpSound);
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject); // Destruye ambos 
     }

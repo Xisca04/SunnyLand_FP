@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PU_CountdownTimer : MonoBehaviour
 {
+    [SerializeField] private AudioClip powerUpSound;
+    private AudioSource _audiosource;
+
+    private void Start()
+    {
+        _audiosource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         StartCoroutine("Destroy");
@@ -12,6 +20,7 @@ public class PU_CountdownTimer : MonoBehaviour
     private IEnumerator Destroy()
     {
         yield return new WaitForSeconds(3.0f);
+        _audiosource.PlayOneShot(powerUpSound);
         Destroy(this.gameObject);
     }
 }

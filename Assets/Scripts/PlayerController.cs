@@ -19,10 +19,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayerMask;
 
+    [SerializeField] private AudioClip[] playerSounds;
+
     private bool isCrouching = true;
     public bool isJumping = false;
 
     private bool isOnTheGround = true;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider2D = GetComponent<BoxCollider2D>(); 
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
             _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
 
-           // SoundManager.PlaySound(SoundManager.Sound.Jump);
+            _audioSource.PlayOneShot(playerSounds[0]);
         }
 
         // Fall animation
@@ -153,7 +157,7 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         _animator.SetBool("Die", true);
-       // SoundManager.Instance.PlaySound(SoundManager.Instance.Sound.Die);
+        _audioSource.PlayOneShot(playerSounds[1]);
     }
 
     public void DieOff()
