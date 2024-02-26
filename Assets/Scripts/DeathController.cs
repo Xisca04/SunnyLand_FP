@@ -36,15 +36,15 @@ public class DeathController : MonoBehaviour
 
                 if (collision.gameObject.CompareTag("Enemy_Easy"))
                 {
-                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_EASY_SCORE);
+                    Score.AddScore(Score.ENEMY_EASY_SCORE);
                 }
                 else if (collision.gameObject.CompareTag("Enemy_Medium"))
                 {
-                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_MEDIUM_SCORE);
+                    Score.AddScore(Score.ENEMY_MEDIUM_SCORE);
                 }
                 else if (collision.gameObject.CompareTag("Enemy_Hard"))
                 {
-                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_HARD_SCORE);
+                    Score.AddScore(Score.ENEMY_HARD_SCORE);
                 }
             }
             else // Si el jugador choca con el enemigo desde los lados o por debajo, recibe daño

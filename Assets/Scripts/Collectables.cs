@@ -22,12 +22,12 @@ public class Collectables : MonoBehaviour
             if (gameObject.CompareTag("Gem"))
             {
                 _audioSource.PlayOneShot(collectableSounds[0]);
-                collision.gameObject.GetComponent<Score>().AddScore(Score.GEM_SCORE);
+                Score.AddScore(Score.GEM_SCORE);
             }
             else if (gameObject.CompareTag("Cherry"))
             {
                 _audioSource.PlayOneShot(collectableSounds[1]);
-                collision.gameObject.GetComponent<Score>().AddScore(Score.CHERRY_SCORE);
+                Score.AddScore(Score.CHERRY_SCORE);
             }
         }
     }
