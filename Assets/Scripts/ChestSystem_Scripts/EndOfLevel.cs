@@ -7,12 +7,10 @@ public class EndOfLevel : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private GameObject winPanel;
-    // [SerializeField] private GameObject losePanel;
 
     private void Start()
     {
         winPanel.SetActive(false);
-        // losePanel.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -39,16 +37,6 @@ public class EndOfLevel : MonoBehaviour
             Loader.Load(Loader.Scene.Level1);
         }
     }
-
-    /*
-    private IEnumerator LoseLevel()
-    {
-        // losePanel.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
-        // Vuelve a empezar el nivel de nuevo
-        SceneManager.LoadScene("Level1");
-    }
-    */
 }
 
 
