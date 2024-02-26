@@ -11,6 +11,7 @@ public class CreditsManager : MonoBehaviour
     [SerializeField] private GameObject winnerPanel;
     [SerializeField] private GameObject credits;
     [SerializeField] private Button mainMenuButton;
+    [SerializeField] private ParticleSystem starsParticles;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class CreditsManager : MonoBehaviour
         winnerPanel.SetActive(true);
         credits.SetActive(false);
         mainMenuButton.gameObject.SetActive(false);
+        starsParticles.Play();
         StartCoroutine("WinnerPanel");
     }
 
@@ -25,6 +27,7 @@ public class CreditsManager : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         winnerPanel.SetActive(false);
+        starsParticles.Stop();
         credits.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
     }
