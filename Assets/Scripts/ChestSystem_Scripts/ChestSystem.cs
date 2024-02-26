@@ -9,10 +9,12 @@ public class ChestSystem : MonoBehaviour
     private Animator _anim;
 
     [SerializeField] private GameObject panelAdvise;
+    [SerializeField] private ParticleSystem _particles;
     private void Start()
     {
         _anim = GetComponent<Animator>();
         HidePanel();
+        _particles.Stop();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -20,8 +22,8 @@ public class ChestSystem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Chest found");
-           _anim.SetBool("IsOpened", true);
-            // sistema partículas 
+            _anim.SetBool("IsOpened", true);
+            _particles.Play();
             StartCoroutine("PanelActive");
         }
         
@@ -48,6 +50,7 @@ public class ChestSystem : MonoBehaviour
         yield return new WaitForSeconds(3);
         HidePanel();
         _anim.SetBool("IsOpened", false);
+        _particles.Stop();
     }
 
     public void HidePanel()
