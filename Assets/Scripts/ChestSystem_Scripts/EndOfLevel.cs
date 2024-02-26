@@ -36,7 +36,7 @@ public class EndOfLevel : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayerPositionX") && PlayerPrefs.HasKey("PlayerPositionY"))
         {
             Debug.Log($"al checkpoint");
-            SceneManager.LoadScene("Level1");
+            Loader.Load(Loader.Scene.Level1);
         }
     }
 

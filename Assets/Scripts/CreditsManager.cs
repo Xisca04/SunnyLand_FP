@@ -31,7 +31,7 @@ public class CreditsManager : MonoBehaviour
 
     private void GoToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        Loader.Load(Loader.Scene.MainMenu);
     }
 
 }
