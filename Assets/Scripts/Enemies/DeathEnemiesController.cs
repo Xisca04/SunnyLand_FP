@@ -21,11 +21,10 @@ public class DeathEnemiesController : MonoBehaviour
     private IEnumerator VFXDeath()
     {
         GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
+        Destroy(gameObject.GetComponent<BoxCollider2D>());
         gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
         _audioSource.PlayOneShot(enemyDeath);
-        yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject); // Destruye ambos 
-
-        // añadir el score de cada enemigo
+        yield return new WaitForSeconds(0.25f);
+        Destroy(gameObject); // Destruye ambos 
     }
 }

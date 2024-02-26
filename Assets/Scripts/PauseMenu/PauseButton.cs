@@ -14,5 +14,7 @@ public class PauseButton : MonoBehaviour
     public void PauseMenuOn()
     {
         gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        Time.timeScale = 0f;
+        // SoundManager.PlaySound(SoundManager.Sound.ButtonOver);
     }
 }
