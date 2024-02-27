@@ -47,10 +47,10 @@ public class ChestSystem : MonoBehaviour
 
     private IEnumerator ChestClosed()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         HidePanel();
-        _anim.SetBool("IsOpened", false);
         _particles.Stop();
+        _anim.SetBool("IsOpened", false);
     }
 
     public void HidePanel()
