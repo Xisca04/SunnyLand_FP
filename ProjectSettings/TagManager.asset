@@ -15,6 +15,7 @@ TagManager:
   - Enemy_Medium
   - Enemy_Hard
   - FinishRace
+  - Repeat
   layers:
   - Default
   - TransparentFX

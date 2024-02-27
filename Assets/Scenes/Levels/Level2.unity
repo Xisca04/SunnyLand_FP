@@ -27053,10 +27053,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2102819007}
     m_Modifications:
-    - target: {fileID: -5997129009932276420, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1773884628781549508, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.9150844
@@ -27097,29 +27093,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2740999183235151486, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3065179
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740999183235151486, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Size.y
-      value: 0.23994932
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740999183235151486, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.026741058
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740999183235151486, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.020025332
-      objectReference: {fileID: 0}
     - target: {fileID: 2941357717427747834, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
       propertyPath: m_Name
       value: Opossum
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941357717427747834, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8716834314913426877, guid: 9ce5ff31b36e26e40a622dc19f3eb640, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -34505,26 +34481,6 @@ PrefabInstance:
     - target: {fileID: 5683927143138372667, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
       propertyPath: m_Name
       value: slimer1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666410953670604068, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
-      propertyPath: m_Size.x
-      value: 0.31931895
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666410953670604068, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
-      propertyPath: m_Size.y
-      value: 0.21806854
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666410953670604068, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.00000008940697
-      objectReference: {fileID: 0}
-    - target: {fileID: 6666410953670604068, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08096573
-      objectReference: {fileID: 0}
-    - target: {fileID: 7196140864828615881, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8943279751579514677, guid: aad3763d0b126d1409ba51f79365fc35, type: 3}
       propertyPath: waypoints.Array.data[0]

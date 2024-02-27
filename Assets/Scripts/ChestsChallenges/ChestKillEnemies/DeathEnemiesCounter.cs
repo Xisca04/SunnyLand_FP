@@ -7,6 +7,7 @@ public class DeathEnemiesCounter : MonoBehaviour
 {
     // Counts every time the player kills an enemy
     [SerializeField] private PlayerController _playerController;
+    [SerializeField] private GameManager _gameManager;
     [SerializeField] private int enemyDeaths;
     [SerializeField] private TextMeshProUGUI enemyDeathsText;
     
@@ -17,10 +18,7 @@ public class DeathEnemiesCounter : MonoBehaviour
 
     private void Update()
     {
-        if(enemyDeaths >= 10)
-        {
-            Debug.Log("al checkpoint nivel2");
-        }
+        CheckWinner();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // detecta si es un enemigo a lo que toca por debajo de él, pero si toca este que no sea desde arriba el enemigo mata al player
@@ -40,6 +38,9 @@ public class DeathEnemiesCounter : MonoBehaviour
             else // Si el jugador choca con el enemigo desde los lados o por debajo, recibe daño
             {
                 Debug.Log($"empiezas el nivel 2 de 0");
+                gameObject.GetComponent<GameOver>().gameOverPanel.SetActive(true);
+                _playerController.Die();
+                StartCoroutine("LoseLevel");
             }
         }
     }
@@ -50,4 +51,18 @@ public class DeathEnemiesCounter : MonoBehaviour
         enemyDeathsText.text = enemyDeaths.ToString();
     }
 
+    private void CheckWinner()
+    {
+        if (enemyDeaths >= 10)
+        {
+            Loader.Load(Loader.Scene.Level2);
+            _gameManager.Load();
+        }
+    }
+
+    private IEnumerator LoseLevel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Loader.Load(Loader.Scene.Level2);
+    }
 }

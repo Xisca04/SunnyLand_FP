@@ -11,4 +11,14 @@ public class CheckpointSetup : MonoBehaviour
         _gameManager.Load();
     }
 
+    private void Update()
+    {
+        /*
+        if ()
+        {
+            // load 
+        }
+        */
+    }
+
 }

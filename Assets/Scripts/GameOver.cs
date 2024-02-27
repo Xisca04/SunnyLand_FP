@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private Checkpoint _checkpoint;
-    [SerializeField] private GameObject gameOverPanel;
+    public GameObject gameOverPanel;
     private PlayerController _playerController;
 
     private float animTimeDie = 1.0f;
