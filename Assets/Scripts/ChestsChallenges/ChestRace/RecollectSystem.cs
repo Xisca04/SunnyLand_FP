@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class RecollectSystem : MonoBehaviour
 {
     private int applesCollected;
-    public TextMeshProUGUI applesCollectedText; // Asegúrate de importar UnityEngine.UI para poder usar Text
+    public TextMeshProUGUI applesCollectedText;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject losePanel;
+
+    [SerializeField] private GameManager _gameManager;
 
     private void Start()
     {
         applesCollected = 0;
+        winPanel.SetActive(false);
+        losePanel.SetActive(false);
     }
 
+    private void Update()
+    {
+        if(SimpleTimer.Instance.timeLeft == 0)
+        {
+            StartCoroutine("LoseLevel");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,17 +39,17 @@ public class RecollectSystem : MonoBehaviour
 
         if (other.gameObject.CompareTag("FinishRace"))
         {
-            if (applesCollected >= 10 && CountdownTimer.Instance.timeLeft > 0)
+            if (applesCollected >= 10 && SimpleTimer.Instance.timeLeft > 0)
             {
                 // && TIMER NO A CERO
-                Debug.Log($"nivel ganado");
-                CountdownTimer.Instance.timeLeft = 0;
+                // SimpleTimer.Instance.timeLeft = 0;
+                StartCoroutine("WinLevel");
             }
-            else if (CountdownTimer.Instance.timeLeft <= 0)
+            else if (applesCollected < 10)
             {
                 // && TIMER  A CERO
-                Debug.Log($"nivel perdido");
-                CountdownTimer.Instance.timeLeft = 0;
+                // SimpleTimer.Instance.timeLeft = 0;
+                StartCoroutine("LoseLevel"); 
             }
         }
     }
@@ -45,4 +59,23 @@ public class RecollectSystem : MonoBehaviour
      applesCollectedText.text = applesCollected.ToString();
    }
 
+    private IEnumerator WinLevel()
+    {
+        winPanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        GoToCheckpoint();
+    }
+
+    private IEnumerator LoseLevel()
+    {
+        losePanel.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        Loader.Load(Loader.Scene.Level2);
+    }
+
+    private void GoToCheckpoint()
+    {
+        Loader.Load(Loader.Scene.Level2);
+        _gameManager.Load();
+    }
 }
