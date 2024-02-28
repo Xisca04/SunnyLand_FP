@@ -10,7 +10,7 @@ public class PostProcessing : MonoBehaviour
     // Vignette
 
     private Volume _volume;
-    private Vignette _vignette;
+    [SerializeField] private Vignette _vignette;
 
     private void Awake()
     {
@@ -20,20 +20,24 @@ public class PostProcessing : MonoBehaviour
     private void Start()
     {
         _volume.profile.TryGet(out _vignette); // busca y encuentra la vignette
-        _vignette.active = true;
-    }
-
-    public IEnumerator Desactive() // Descative the vignette
-    {
-        yield return new WaitForSeconds(0.1f);
         _vignette.active = false;
     }
 
-    public IEnumerator Active() // Active the vignette
+    private void Update()
     {
-        _vignette.active = true;
-        yield return new WaitForSeconds(1f);
-        _vignette.intensity.value = 1f;
-        _vignette.color.value = Color.red;
+        if(CountdownTimer.Instance.timeLeft <= 5)
+        {
+            _vignette.active = true;
+        }
+        else if (CountdownTimer.Instance.timeLeft == 0) // no funciona
+        {
+            _vignette.active = false;
+            Debug.Log("desactivar");
+        }
+        else
+        {
+            _vignette.active = false;
+        }
+   
     }
 }

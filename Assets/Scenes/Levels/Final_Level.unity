@@ -191,10 +191,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa967a280457c054bb646d57611f5bd0, type: 3}
     - target: {fileID: 6740828379697853156, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 589088219}
+    - target: {fileID: 6740828379697853156, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 1280227949}
+    - target: {fileID: 6884948995533379524, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: _checkpoint
+      value: 
+      objectReference: {fileID: 893367445}
+    - target: {fileID: 6884948995533379524, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: _gameManager
+      value: 
+      objectReference: {fileID: 1280227949}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85165,6 +85189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fc307252d9329459d4916219a68b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _vignette: {fileID: 0}
 --- !u!1001 &589088216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85661,6 +85686,17 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!114 &893367445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6740828379697853156, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+  m_PrefabInstance: {fileID: 144756891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8a50ecd2b681949a0c42d7d0fe5cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049176525
 GameObject:
   m_ObjectHideFlags: 0

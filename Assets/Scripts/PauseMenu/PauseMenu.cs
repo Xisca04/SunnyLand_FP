@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
-        mainMenuButton.onClick.AddListener(() => { Time.timeScale = 1f; SceneManager.LoadScene("MainMenu"); });
+        mainMenuButton.onClick.AddListener(() => { Time.timeScale = 1f; Loader.Load(Loader.Scene.MainMenu);});
         resumeButton.onClick.AddListener(ResumeGame);
     }
 
