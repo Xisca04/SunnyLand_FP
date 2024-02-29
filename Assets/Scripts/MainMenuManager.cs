@@ -11,13 +11,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button instructionsButton; 
     [SerializeField] private Button bonusLevelButton; 
-    [SerializeField] private Button settingsButton;
     [SerializeField] private Button quitButton;
-    [SerializeField] private Button quitSettingsPanelButton;
     [SerializeField] private Button quitInstructionsPanelButton;
-
     [SerializeField] private GameObject instructionsPanel;
-    [SerializeField] private GameObject settingsPanel;
 
     private void Awake()
     {
@@ -28,16 +24,11 @@ public class MainMenuManager : MonoBehaviour
 
         bonusLevelButton.onClick.AddListener(GoToBonusLevel);
 
-        settingsButton.onClick.AddListener(ShowSettingsPanel);
-
         quitButton.onClick.AddListener(Application.Quit);
-
-        quitSettingsPanelButton.onClick.AddListener(HideSettingsPanel);
 
         quitInstructionsPanelButton.onClick.AddListener(HideInstructionsPanel);
 
         HideInstructionsPanel();
-        HideSettingsPanel();
     }
 
     private void ShowInstructionsPanel()
@@ -48,16 +39,6 @@ public class MainMenuManager : MonoBehaviour
     private void HideInstructionsPanel()
     {
         instructionsPanel.SetActive(false);
-    }
-
-    private void ShowSettingsPanel()
-    {
-        settingsPanel.SetActive(true);
-    }
-
-    private void HideSettingsPanel()
-    {
-        settingsPanel.SetActive(false);
     }
 
     private void GoToLevel1()

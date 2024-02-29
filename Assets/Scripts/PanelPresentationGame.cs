@@ -5,10 +5,12 @@ using UnityEngine;
 public class PanelPresentationGame : MonoBehaviour
 {
     [SerializeField] private GameObject presentationPanel;
+    [SerializeField] private GameObject mainMenu;
 
     private void Start()
     {
         presentationPanel.SetActive(true);
+        mainMenu.SetActive(false);
         StartCoroutine("PresentationPanelOn");
     }
 
@@ -16,5 +18,6 @@ public class PanelPresentationGame : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         presentationPanel.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }
