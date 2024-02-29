@@ -25,7 +25,7 @@ public class CreditsManager : MonoBehaviour
 
     private IEnumerator WinnerPanel()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6.5f);
         winnerPanel.SetActive(false);
         starsParticles.Stop();
         credits.SetActive(true);
