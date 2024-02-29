@@ -6,15 +6,12 @@ using TMPro;
 public class HighScoreManager : MonoBehaviour
 {
     // HighScore -- BonusLevel
-
-    [SerializeField] private TextMeshProUGUI highScoreText;
+    
+    [SerializeField] private TextMeshProUGUI text;
     private int highScore;
 
-    private void UpdateHighScoreText()
-    {
-        highScoreText.text = highScore.ToString();
-    }
-
+    
+    /*
     public const string HIGH_SCORE = "highScore"; // Clave en PlayerPrefs
 
     public static event EventHandler OnHighScoreChange; // Event
@@ -58,4 +55,5 @@ public class HighScoreManager : MonoBehaviour
     {
         return score;
     }
+    */
 }
