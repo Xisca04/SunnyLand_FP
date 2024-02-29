@@ -47,8 +47,6 @@ public class RecollectSystem : MonoBehaviour
             }
             else if (applesCollected < 10)
             {
-                // && TIMER  A CERO
-                // SimpleTimer.Instance.timeLeft = 0;
                 StartCoroutine("LoseLevel"); 
             }
         }

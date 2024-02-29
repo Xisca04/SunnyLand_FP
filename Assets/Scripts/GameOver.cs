@@ -61,6 +61,5 @@ public class GameOver : MonoBehaviour
     private void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       // para reinicioar nivel no poner load scene, solo para navegar entre escenas
     }
 }
