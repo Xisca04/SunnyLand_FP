@@ -25,14 +25,13 @@ public class PostProcessing : MonoBehaviour
 
     private void Update()
     {
-        if(CountdownTimer.Instance.timeLeft <= 5 || SimpleTimer.Instance.timeLeft <= 5)
+        if(CountdownTimer.Instance.timeLeft <= 5)
         {
             _vignette.active = true;
         }
-        else if (CountdownTimer.Instance.timeLeft == 0 || SimpleTimer.Instance.timeLeft == 0) // no funciona
+        else if (CountdownTimer.Instance.timeLeft >= 6) // no funciona
         {
             _vignette.active = false;
-            Debug.Log("desactivar");
         }
         else
         {
