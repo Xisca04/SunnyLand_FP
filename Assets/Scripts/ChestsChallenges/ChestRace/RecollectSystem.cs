@@ -41,8 +41,7 @@ public class RecollectSystem : MonoBehaviour
         {
             if (applesCollected >= 10 && SimpleTimer.Instance.timeLeft > 0)
             {
-                // && TIMER NO A CERO
-                // SimpleTimer.Instance.timeLeft = 0;
+                SimpleTimer.Instance.timeLeft = 60; // paramos timer
                 StartCoroutine("WinLevel");
             }
             else if (applesCollected < 10)
