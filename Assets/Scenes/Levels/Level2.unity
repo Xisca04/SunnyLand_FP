@@ -165,6 +165,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (26)
@@ -571,6 +583,10 @@ PrefabInstance:
       propertyPath: gems
       value: 
       objectReference: {fileID: 1011990235}
+    - target: {fileID: 2462809759967455229, guid: 6606725457654194099e818d99168f80, type: 3}
+      propertyPath: powerUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cc057bed53baf34799f52aab3c84800, type: 3}
     - target: {fileID: 3812888801164506774, guid: 6606725457654194099e818d99168f80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -769,6 +785,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (5)
@@ -831,6 +859,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (32)
@@ -1040,6 +1080,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (4)
@@ -1135,7 +1187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &167114174
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27717,6 +27769,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (14)
@@ -28024,6 +28088,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (2)
@@ -28091,6 +28167,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem
@@ -28113,6 +28201,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (30)
@@ -28815,6 +28915,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (9)
@@ -28879,6 +28991,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (31)
@@ -28941,6 +29065,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (20)
@@ -29292,6 +29428,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (1)
@@ -29421,6 +29569,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (3)
@@ -29527,6 +29687,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (2)
@@ -29651,6 +29823,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (7)
@@ -29753,6 +29937,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (3)
@@ -30108,6 +30304,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (23)
@@ -30440,6 +30648,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (19)
@@ -30738,6 +30958,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (6)
@@ -30894,6 +31126,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (28)
@@ -31172,6 +31416,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (12)
@@ -31234,6 +31490,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (25)
@@ -31336,6 +31604,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (12)
@@ -31358,6 +31638,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (27)
@@ -31420,6 +31712,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (17)
@@ -31566,6 +31870,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (29)
@@ -31628,6 +31944,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (16)
@@ -31730,6 +32058,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (7)
@@ -31845,7 +32185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920472388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32181,6 +32521,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (18)
@@ -32402,6 +32754,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (15)
@@ -32933,6 +33297,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (10)
@@ -33267,6 +33643,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (5)
@@ -34132,6 +34520,18 @@ PrefabInstance:
       propertyPath: _gameOver
       value: 
       objectReference: {fileID: 1743655954}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
+    - target: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
+      propertyPath: playerSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa967a280457c054bb646d57611f5bd0, type: 3}
     - target: {fileID: 6740828379697853156, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
       propertyPath: _animator
       value: 
@@ -34354,6 +34754,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (8)
@@ -34562,6 +34974,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (6)
@@ -35114,6 +35538,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331412144}
   m_CullTransparentMesh: 1
+--- !u!1 &1339600028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339600029}
+  - component: {fileID: 1339600031}
+  - component: {fileID: 1339600030}
+  m_Layer: 5
+  m_Name: Score Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1339600029
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339600028}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1398797677}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -400, y: 464}
+  m_SizeDelta: {x: 1000, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1339600030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339600028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 00000
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cbb500783d6bd494a992e472b64d6568, type: 2}
+  m_sharedMaterial: {fileID: 2553002413949390724, guid: cbb500783d6bd494a992e472b64d6568, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281891048
+  m_fontColor: {r: 0.909804, g: 0.47058827, b: 0.21960786, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 100
+  m_fontSizeBase: 100
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1339600031
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339600028}
+  m_CullTransparentMesh: 1
 --- !u!1 &1340328530
 GameObject:
   m_ObjectHideFlags: 0
@@ -35482,6 +36040,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (13)
@@ -35630,6 +36200,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1339600029}
   - {fileID: 920472388}
   - {fileID: 943214399}
   - {fileID: 942305711}
@@ -35888,6 +36459,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (8)
@@ -36011,6 +36594,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry
@@ -36342,6 +36937,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8713495844047928739, guid: 822043ab6be68a0478b70657d1b7b124, type: 3}
+      propertyPath: powerUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    - target: {fileID: 8713495844047928739, guid: 822043ab6be68a0478b70657d1b7b124, type: 3}
       propertyPath: correctDirection
       value: 
       objectReference: {fileID: 172600043}
@@ -36355,6 +36954,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5758293104694341219, guid: 822043ab6be68a0478b70657d1b7b124, type: 3}
   m_PrefabInstance: {fileID: 1544877296}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552345193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552345195}
+  - component: {fileID: 1552345194}
+  m_Layer: 0
+  m_Name: ScoreUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1552345194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552345193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4902fc9c4e5a61542bd2d9a80a0980e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1339600030}
+--- !u!4 &1552345195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552345193}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2045856, y: 4.674585, z: -15.10204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1556846353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36553,6 +37197,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (1)
@@ -36747,6 +37403,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (24)
@@ -36981,6 +37649,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (3)
@@ -37043,6 +37723,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (10)
@@ -37175,6 +37867,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (21)
@@ -37321,6 +38025,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (11)
@@ -38602,6 +39318,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (11)
@@ -38664,6 +39392,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (6)
@@ -38686,6 +39426,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (4)
@@ -39748,7 +40500,7 @@ Transform:
   m_GameObject: {fileID: 2017183761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.13, z: 0}
+  m_LocalPosition: {x: 0, y: 0.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45824,6 +46576,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (9)
@@ -45926,6 +46690,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (4)
@@ -46110,6 +46886,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 5910712113646609887, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 6877020801498040252, guid: b5f3ae6bddddab644aca12106c1bfa2c, type: 3}
       propertyPath: m_Name
       value: Gem (5)
@@ -46222,6 +47010,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 648169556}
     m_Modifications:
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    - target: {fileID: 125286109218388250, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
+      propertyPath: collectableSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
     - target: {fileID: 1438936135108874896, guid: a9138c560d6a83744aea49517ac226ba, type: 3}
       propertyPath: m_Name
       value: Cherry (22)
@@ -46569,9 +47369,10 @@ SceneRoots:
   - {fileID: 722737176}
   - {fileID: 1248444083}
   - {fileID: 1972534116}
+  - {fileID: 1195936729}
+  - {fileID: 1552345195}
   - {fileID: 1398797677}
   - {fileID: 298011740}
-  - {fileID: 1195936729}
   - {fileID: 1455085976}
   - {fileID: 1184652684}
   - {fileID: 1994470873}
