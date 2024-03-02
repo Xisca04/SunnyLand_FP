@@ -11,6 +11,7 @@ public class DeathEnemiesCounter : MonoBehaviour
     [SerializeField] private int enemyDeaths;
     [SerializeField] private TextMeshProUGUI enemyDeathsText;
     [SerializeField] private GameObject winPanel;
+    [SerializeField] private ParticleSystem _fireEmbersParticles;
 
     private GameObject spawnEnemies;
     
@@ -18,6 +19,7 @@ public class DeathEnemiesCounter : MonoBehaviour
     {
         enemyDeaths = 0;
         winPanel.SetActive(false);
+        _fireEmbersParticles.Play();
     }
 
     private void Update()

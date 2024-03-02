@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheckpointSetup : MonoBehaviour
 {
     [SerializeField] GameManager _gameManager;
-    /*
+    
     private void Update()
     {
         if (_gameManager.chestCompleted == true)
@@ -13,10 +13,11 @@ public class CheckpointSetup : MonoBehaviour
             _gameManager.Load();
         }
     }
-    */
+    
+    /*
     private void Start()
     {
         _gameManager.Load();
     }
-
+    */
 }
