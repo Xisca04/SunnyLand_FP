@@ -89093,7 +89093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &554687272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95262,6 +95262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 22772314}
+  chestCompleted: 0
 --- !u!4 &1280227950
 Transform:
   m_ObjectHideFlags: 0
@@ -96326,8 +96327,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475934661}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 584.62, y: -17.15, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.820007, y: -13.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -96381,7 +96382,7 @@ Transform:
   - {fileID: 630013633}
   - {fileID: 28387668}
   - {fileID: 1084877585}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1958188511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477346630
 GameObject:
@@ -99643,6 +99644,7 @@ Transform:
   - {fileID: 2020588072}
   - {fileID: 494944781}
   - {fileID: 864707754}
+  - {fileID: 1475934662}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980159213
@@ -101085,7 +101087,6 @@ SceneRoots:
   - {fileID: 1707707492}
   - {fileID: 2118518056}
   - {fileID: 144756891}
-  - {fileID: 1475934662}
   - {fileID: 1280227950}
   - {fileID: 1958188511}
   - {fileID: 1350084524}
