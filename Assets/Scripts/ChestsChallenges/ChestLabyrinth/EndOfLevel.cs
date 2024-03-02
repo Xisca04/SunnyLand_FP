@@ -25,6 +25,7 @@ public class EndOfLevel : MonoBehaviour
     {
         winPanel.SetActive(true);
         yield return new WaitForSeconds(1.0f);
+        _gameManager.chestCompleted = true;
         ChargePlayerToCheckpoint();
         // Vuelta al check point con la partida igual que la había dejado y el chest destruido
     }

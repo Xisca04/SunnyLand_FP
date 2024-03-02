@@ -1659,6 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 1426071190}
+  chestCompleted: 0
 --- !u!4 &1091299064
 Transform:
   m_ObjectHideFlags: 0
@@ -1763,7 +1764,8 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1457496967}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6655339752327510783, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1798,6 +1800,7 @@ MonoBehaviour:
   _gameManager: {fileID: 1091299063}
   enemyDeaths: 0
   enemyDeathsText: {fileID: 165531648}
+  winPanel: {fileID: 932494684}
 --- !u!114 &1426071190 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4495057836000365890, guid: 3c570281c74fa8042b2658ffef143cb7, type: 3}
@@ -4658,7 +4661,7 @@ GameObject:
   - component: {fileID: 1781215704}
   m_Layer: 0
   m_Name: SpawnEnemies_Block
-  m_TagString: Untagged
+  m_TagString: SpawnEnemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

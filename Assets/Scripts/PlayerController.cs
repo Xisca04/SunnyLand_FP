@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // Controller of the player
 
-    private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D boxCollider2D;
     public Animator _animator;

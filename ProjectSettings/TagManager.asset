@@ -16,6 +16,8 @@ TagManager:
   - Enemy_Hard
   - FinishRace
   - Repeat
+  - FxTemporaire
+  - SpawnEnemies
   layers:
   - Default
   - TransparentFX

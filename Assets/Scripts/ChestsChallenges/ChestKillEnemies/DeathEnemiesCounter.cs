@@ -10,10 +10,14 @@ public class DeathEnemiesCounter : MonoBehaviour
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private int enemyDeaths;
     [SerializeField] private TextMeshProUGUI enemyDeathsText;
+    [SerializeField] private GameObject winPanel;
+
+    private GameObject spawnEnemies;
     
     private void Start()
     {
         enemyDeaths = 0;
+        winPanel.SetActive(false);
     }
 
     private void Update()
@@ -55,6 +59,9 @@ public class DeathEnemiesCounter : MonoBehaviour
     {
         if (enemyDeaths >= 10)
         {
+            winPanel.SetActive(true);
+            spawnEnemies = GameObject.FindGameObjectWithTag("SpawnEnemies");
+            Destroy(spawnEnemies);
             Loader.Load(Loader.Scene.Level2);
             _gameManager.Load();
         }

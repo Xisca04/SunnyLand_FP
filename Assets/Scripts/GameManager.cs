@@ -10,12 +10,26 @@ public class GameManager : MonoBehaviour
     private const string PLAYER_POS_X = "PlayerPositionX";
     private const string PLAYER_POS_Y = "PlayerPositionY";
 
-    private void Update()
+    private bool firstTime = true;
+    public bool chestCompleted = false;
+
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if(chestCompleted == false)
         {
-            PlayerPrefs.DeleteAll();
+            DeleteKeyPlayer();
         }
+        else if(chestCompleted == true)
+        {
+            Load();
+        }
+    }
+
+    private void DeleteKeyPlayer()
+    {
+        PlayerPrefs.DeleteKey("PlayerPositionX");
+        PlayerPrefs.DeleteKey("PlayerPositionX");
+        firstTime = true;
     }
 
     public void Save()
@@ -25,6 +39,7 @@ public class GameManager : MonoBehaviour
         Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
         PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
         PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
+        firstTime = false;
         Debug.Log($"{pos}");
     }
 
