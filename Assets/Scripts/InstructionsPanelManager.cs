@@ -10,42 +10,26 @@ public class InstructionsPanelManager : MonoBehaviour
     [SerializeField] private Button nextPageButton;
     [SerializeField] private Button previousPageButton;
 
-    [SerializeField] private GameObject[] pages;
-    private int currentPage;
+    [SerializeField] private GameObject page1;
+    [SerializeField] private GameObject page2;
 
     private void Awake()
     {
         nextPageButton.onClick.AddListener(NextPage);
         previousPageButton.onClick.AddListener(PreviousPage);
-        DisplayCurrentPage();
+        page1.SetActive(true);
+        page2.SetActive(false);
     }
 
     private void NextPage()
     {
-        if (currentPage < pages.Length - 1)
-        {
-            currentPage++;
-            DisplayCurrentPage();
-        }
+        page1.SetActive(false);
+        page2.SetActive(true);
     }
 
     private void PreviousPage()
     {
-        // Retroceder a la página anterior si es posible
-        if (currentPage > 0)
-        {
-            currentPage--;
-            DisplayCurrentPage();
-        }
-    }
-
-    private void DisplayCurrentPage()
-    {
-        foreach (GameObject obj in pages)
-        {
-            obj.SetActive(false);
-        }
-
-        pages[currentPage].SetActive(true);
+        page1.SetActive(true);
+        page2.SetActive(false);
     }
 }
