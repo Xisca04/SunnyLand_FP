@@ -10,6 +10,7 @@ public class RecollectSystem : MonoBehaviour
     public TextMeshProUGUI applesCollectedText;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
+    [SerializeField] private GameObject warningPanel;
 
     [SerializeField] private GameManager _gameManager;
 
@@ -18,6 +19,7 @@ public class RecollectSystem : MonoBehaviour
         applesCollected = 0;
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        warningPanel.SetActive(false);
     }
 
     private void Update()
@@ -46,7 +48,7 @@ public class RecollectSystem : MonoBehaviour
             }
             else if (applesCollected < 10)
             {
-                StartCoroutine("LoseLevel"); 
+                warningPanel.SetActive(true);
             }
         }
     }
@@ -59,6 +61,7 @@ public class RecollectSystem : MonoBehaviour
     private IEnumerator WinLevel()
     {
         winPanel.SetActive(true);
+        warningPanel.SetActive(false); // aseguro que se desactive
         yield return new WaitForSeconds(3f);
         GoToCheckpoint();
     }
@@ -66,8 +69,16 @@ public class RecollectSystem : MonoBehaviour
     private IEnumerator LoseLevel()
     {
         losePanel.SetActive(true);
+        warningPanel.SetActive(false); // aseguro que se desactive
         yield return new WaitForSeconds(3f);
         Loader.Load(Loader.Scene.Level2);
+    }
+
+    private IEnumerator WarninPanel()
+    {
+        warningPanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        warningPanel.SetActive(false);
     }
 
     private void GoToCheckpoint()

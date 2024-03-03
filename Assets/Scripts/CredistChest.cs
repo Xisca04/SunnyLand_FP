@@ -58,4 +58,5 @@ public class CredistChest : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Loader.Load(Loader.Scene.Final_Level);
     }
+
 }
