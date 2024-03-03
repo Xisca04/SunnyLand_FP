@@ -13,21 +13,12 @@ public class GameOver : MonoBehaviour
     private float animTimeDie = 1.0f;
     private float timeToRealoadLevel = 1.2f;
 
-    // Añadir --> coger altura del dead zone --> dejar al jugador en esa altura ---> animacion dead --> panel game over
-
     private void Start()
     {
         gameOverPanel.SetActive(false);
         _playerController = GetComponent<PlayerController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D otherCollider)
-    {
-        if (otherCollider.gameObject.CompareTag("DeadZone"))
-        {
-            GameOverLevels();
-        }
-    }
 
     public void GameOverLevels()
     {
