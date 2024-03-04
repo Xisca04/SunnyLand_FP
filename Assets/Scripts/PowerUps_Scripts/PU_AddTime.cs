@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class PU_AddTime : MonoBehaviour
 {
+    // PowerUp to add time to the Countdown timer
+
+    // Audio
     [SerializeField] private AudioClip powerUpSound;
     private AudioSource _audiosource;
+
+    // Coroutine's variable
+    private float timeLeftCoroutine = 0.3f;
 
     private void Start()
     {
@@ -15,20 +21,20 @@ public class PU_AddTime : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) // Add time to the timer + VFX on
         {
             CountdownTimer.Instance.timeLeft += CountdownTimer.Instance.timeToAdd;
             StartCoroutine("VFXOn");
         }
     }
 
-    private IEnumerator VFXOn()
+    private IEnumerator VFXOn() // Deactivate the sprite -> Destroy the collider --> we can see the VFX
     {
-        GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
-        Destroy(gameObject.GetComponent<BoxCollider2D>()); // Destruye el collider para que el player no colisione con este hasta que se detrya todo el objeto
-        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
+        GetComponent<SpriteRenderer>().enabled = false; 
+        Destroy(gameObject.GetComponent<BoxCollider2D>()); 
+        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Acces to the first children 
         _audiosource.PlayOneShot(powerUpSound);
-        yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject); // Destruye ambos 
+        yield return new WaitForSeconds(timeLeftCoroutine);
+        Destroy(this.gameObject); // Destroy both
     }
 }

@@ -105525,7 +105525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 22772314}
-  chestCompleted: 0
 --- !u!4 &1280227950
 Transform:
   m_ObjectHideFlags: 0
@@ -110341,9 +110340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 10
+  timeToAdd: 5
   timerText: {fileID: 1167847927}
   _gameOver: {fileID: 893367450}
-  timeToAdd: 5
 --- !u!4 &1707707492
 Transform:
   m_ObjectHideFlags: 0
@@ -114294,7 +114293,7 @@ Transform:
   m_GameObject: {fileID: 2118518055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -544.31934, y: 0.8693867, z: -0.46279967}
+  m_LocalPosition: {x: 43.21, y: -14.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

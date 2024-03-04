@@ -45065,7 +45065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 1743655956}
-  chestCompleted: 0
 --- !u!4 &1994470873
 Transform:
   m_ObjectHideFlags: 0

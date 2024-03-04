@@ -7,8 +7,8 @@ public class DeathController : MonoBehaviour
     // Controlls the collision between Player and Enemy
 
     // To get the component
-     private PlayerController _playerController;
-     private GameOver _gameOver;
+     public PlayerController _playerController;
+     public GameOver _gameOver;
 
     private void Start()
     {

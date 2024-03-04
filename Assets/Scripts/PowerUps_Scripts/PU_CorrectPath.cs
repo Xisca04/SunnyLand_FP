@@ -7,9 +7,10 @@ public class PU_CorrectPath : MonoBehaviour
 {
     // Power Up that shows the direction to the right chest
 
-    // Colllision con el player --> mostrar un objeto
-
+    // Variable to show the correct path
     [SerializeField] private GameObject correctDirection;
+
+    // Sound
     [SerializeField] private AudioClip powerUpSound;
     private AudioSource _audiosource;
 
@@ -22,20 +23,20 @@ public class PU_CorrectPath : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")) // Shows the path to the correct chest
         {
             correctDirection.SetActive(true);
             StartCoroutine("VFXOn");
         }
     }
 
-    private IEnumerator VFXOn()
+    private IEnumerator VFXOn() // Deactivate the sprite nad destroy the collider
     {
-        GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
-        Destroy(gameObject.GetComponent<BoxCollider2D>()); // Destruye el collider para que el player no colisione con este hasta que se detrya todo el objeto
-        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
+        GetComponent<SpriteRenderer>().enabled = false; 
+        Destroy(gameObject.GetComponent<BoxCollider2D>()); 
+        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Access to the first children (VFX)
         _audiosource.PlayOneShot(powerUpSound);
         yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject); // Destruye ambos 
+        Destroy(this.gameObject); // Destroy both 
     }
 }
