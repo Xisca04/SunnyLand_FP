@@ -35,15 +35,15 @@ public class DeathController : MonoBehaviour
                 // Add the score acording to the enemy's tag
                 if (collision.gameObject.CompareTag("Enemy_Easy"))
                 {
-                    collision.gameObject.GetComponent<Score>().AddScore(Score.ENEMY_EASY_SCORE);
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_EASY_SCORE);
                 }
                 else if (collision.gameObject.CompareTag("Enemy_Medium"))
                 {
-                    collision.gameObject.GetComponent<Score>().AddScore(Score.ENEMY_MEDIUM_SCORE);
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_MEDIUM_SCORE);
                 }
                 else if (collision.gameObject.CompareTag("Enemy_Hard"))
                 {
-                    collision.gameObject.GetComponent<Score>().AddScore(Score.ENEMY_HARD_SCORE);
+                    gameObject.GetComponent<Score>().AddScore(Score.ENEMY_HARD_SCORE);
                 }
             }
             else // If the player collisions with the enemy from the sides or below
