@@ -9,6 +9,9 @@ public class ChestSystem : MonoBehaviour
     // To get the component
     private Animator _anim;
 
+    // Coroutine's variable
+    private float timeLeftCoroutine = 1.5f;
+
     // UI
     [SerializeField] private GameObject panelAdvise;
 
@@ -44,18 +47,20 @@ public class ChestSystem : MonoBehaviour
 
     private IEnumerator PanelActive()
     {
-        yield return new WaitForSeconds(1);
+
+        yield return new WaitForSeconds(timeLeftCoroutine);
         panelAdvise.SetActive(true);
     }
 
     private IEnumerator ChestClosed()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeLeftCoroutine);
         HidePanel();
         _particles.Stop();
         _anim.SetBool("IsOpened", false);
     }
 
+    // Function for the Button NO of the Advise Panel
     public void HidePanel()
     {
         panelAdvise.SetActive(false);

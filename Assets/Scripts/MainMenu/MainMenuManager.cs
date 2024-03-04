@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    // logica botones y panel del main menu
+    // Logic's panels and buttons
 
+    // UI
     [SerializeField] private Button playButton;
     [SerializeField] private Button instructionsButton; 
     [SerializeField] private Button bonusLevelButton; 
@@ -41,11 +42,13 @@ public class MainMenuManager : MonoBehaviour
         instructionsPanel.SetActive(false);
     }
 
+    // Load the Level1
     private void GoToLevel1()
     {
         Loader.Load(Loader.Scene.Level1);
     }
 
+    // Load the Mingame Scene
     private void GoToMinigame()
     {
         Loader.Load(Loader.Scene.Minigame);

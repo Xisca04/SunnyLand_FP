@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AppleRaceLevel : MonoBehaviour
 {
+    // Apples VFX On when the Player collissions them
+
+    // Sound
     private AudioSource _audioSource;
     [SerializeField] private AudioClip appleSound;
 
@@ -17,14 +20,14 @@ public class AppleRaceLevel : MonoBehaviour
     {
         StartCoroutine("VFXOn");
     }
-
+    // At this form the VFX is able to see it
     private IEnumerator VFXOn()
     {
-        GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
-        Destroy(gameObject.GetComponent<BoxCollider2D>()); // Destruye el collider para que el player no colisione con este hasta que se detrya todo el objeto
-        _audioSource.PlayOneShot(appleSound);
-        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
+        GetComponent<SpriteRenderer>().enabled = false; // Deactivate the sprite of the apple
+        Destroy(gameObject.GetComponent<BoxCollider2D>()); // Destroy collider -> player don't collision it 
+        _audioSource.PlayOneShot(appleSound); // Activate the audioclip
+        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Access to the first children to see the VFX 
         yield return new WaitForSeconds(0.3f);
-        Destroy(gameObject); // Destruye ambos 
+        Destroy(gameObject); // Destroy both
     }
 }

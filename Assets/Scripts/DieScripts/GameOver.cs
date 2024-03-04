@@ -5,11 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    // Game Over system
+
+    // References
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private Checkpoint _checkpoint;
+
+    // UI
     public GameObject gameOverPanel;
+
+    // To get the component
     private PlayerController _playerController;
 
+    // Coroutines' variables
     private float animTimeDie = 1.0f;
     private float timeToRealoadLevel = 1.2f;
 
@@ -19,7 +27,7 @@ public class GameOver : MonoBehaviour
         _playerController = GetComponent<PlayerController>();
     }
 
-
+    // Activates the system of the Game Over
     public void GameOverLevels()
     {
         StartCoroutine("GameOverCoroutine");
@@ -27,28 +35,29 @@ public class GameOver : MonoBehaviour
 
     private IEnumerator GameOverCoroutine()
     {
-        _playerController.Die();
+        _playerController.Die(); // Player's die animation
         yield return new WaitForSeconds(animTimeDie);
-        gameOverPanel.SetActive(true);
+        gameOverPanel.SetActive(true); // Activates the game Over panel
         yield return new WaitForSeconds(timeToRealoadLevel);
-        ReachedCheckpoint();
-        gameOverPanel.SetActive(false);
-        _playerController.DieOff();
-        Debug.Log("No muerto, sigue corriendo");
+        ReachedCheckpoint(); // Check if the player has passed the checkpoint
+        gameOverPanel.SetActive(false); // Desactivates the game Over panel
+        _playerController.DieOff(); // Desactivate the die's animation
     }
 
+    // If the player has collisions the checkpoint --> he restart the level from that point
     private void ReachedCheckpoint()
     {
         if (_checkpoint.activatedCheckpoint == true)
         {
-            _gameManager.Load();
+            _gameManager.Load(); // Load the saved position (from Game Manager)
         }
         else if (_checkpoint.activatedCheckpoint == false)
         {
-            ReloadLevel(); // desdel inicio
+            ReloadLevel(); // Restart the Level
         }
     }
 
+    // Get the active scene to restart the respective level
     private void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

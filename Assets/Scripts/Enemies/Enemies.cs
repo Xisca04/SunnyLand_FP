@@ -6,18 +6,18 @@ using UnityEngine.AI;
 
 public class Enemies : MonoBehaviour
 {
-    // Enemies controller damage
+    // Enemies movement
 
+    // Movement
     [SerializeField] private Transform[] waypoints;
     [SerializeField] private float speed;
-    
     private int indexWaypointActual = 0;
     private int nextWaypoint = 1;
     private bool waypointsOrder = true;
 
     private void Start()
     {
-        // Inicializar la posición del enemigo al primer waypoint
+        // Initialize the enemy in the first waypoint
         transform.position = waypoints[indexWaypointActual].position;
     }
 
@@ -26,6 +26,7 @@ public class Enemies : MonoBehaviour
         EnemyMovement();
     }
 
+    // Enemy move to the next waypint in order and turn around
     private void EnemyMovement()
     {
         if (waypointsOrder && nextWaypoint + 1 >= waypoints.Length)
@@ -58,10 +59,10 @@ public class Enemies : MonoBehaviour
 
     void TurnAroundSprite()
     {
-        // Invertir la escala en el eje X para girar el sprite
-        Vector2 nuevaEscala = transform.localScale;
-        nuevaEscala.x *= -1; // la escala se mutiplica por -1 así el sprite da la vuelta
-        transform.localScale = nuevaEscala;
+        // Invest the X scale to turn around the sprite
+        Vector2 newScale = transform.localScale;
+        newScale.x *= -1; // The scale multiplies to -1 = sprite turn around
+        transform.localScale = newScale;
     }
     
 }

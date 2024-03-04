@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class DeathController : MonoBehaviour
 {
-    [SerializeField] private PlayerController _playerController;
-    [SerializeField] private GameOver _gameOver;
+    // Controlls the collision between Player and Enemy
+
+    // To get the component
+     private PlayerController _playerController;
+     private GameOver _gameOver;
 
     private void Start()
     {
@@ -13,27 +16,23 @@ public class DeathController : MonoBehaviour
         _gameOver.GetComponent<GameOver>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) // detecta si es un enemigo a lo que toca por debajo de él, pero si toca este que no sea desde arriba el enemigo mata al player
+    private void OnCollisionEnter2D(Collision2D collision) 
     {
         if (collision.gameObject.CompareTag("Enemy_Easy") || collision.gameObject.CompareTag("Enemy_Medium") || collision.gameObject.CompareTag("Enemy_Hard"))
         {
-            // Obtener la dirección del contacto
+            // Gets the direction's contact
             ContactPoint2D contact = collision.contacts[0];
             Vector2 normal = contact.normal;
 
-            // Si el jugador está cayendo sobre el enemigo, destruye al enemigo
-            /* Vector2.Dot(Vector.up, normal) > 0.5f
-             *  está calculando el producto escalar entre el vector "up" (que apunta hacia arriba) y 
-             *  la normal de la colisión entre el jugador y el enemigo. 
-             *  Esto se usa para determinar si el jugador está colisionando con 
-             *  el enemigo desde arriba o desde los lados. Si el resultado es mayor que 0.5, 
-             *  se considera que el jugador está cayendo sobre el enemigo, lo que indica que debería destruir al enemigo.
-             * */
+            // If the player collision the enemy from the Up's direction
+            // Calculates the scale product between the Up vetor and the nomral one 
+            // If the result is more than 0.5 -> is considered that the player is falling over the enemy
             if (Vector2.Dot(Vector2.up, normal) > 0.5f)
             {
-                _playerController.BounceJump();
-                collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage();
+                _playerController.BounceJump(); // The player makes the rebounce
+                collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage(); // Kill the enemy
 
+                // Add the score acording to the enemy's tag
                 if (collision.gameObject.CompareTag("Enemy_Easy"))
                 {
                     collision.gameObject.GetComponent<Score>().AddScore(Score.ENEMY_EASY_SCORE);
@@ -47,8 +46,9 @@ public class DeathController : MonoBehaviour
                     collision.gameObject.GetComponent<Score>().AddScore(Score.ENEMY_HARD_SCORE);
                 }
             }
-            else // Si el jugador choca con el enemigo desde los lados o por debajo, recibe daño
+            else // If the player collisions with the enemy from the sides or below
             {
+                // Game Over
                 _gameOver.GameOverLevels();
             }
         }

@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class DeathEnemiesController : MonoBehaviour
 {
+    // Enemy's systemm when it dies
+
+    // Sound
     [SerializeField] private AudioClip enemyDeath;
-    private AudioSource _audioSource;
+    private AudioSource _audioSource; // To get the component
+
+    // Coroutine's variable
+    private float timeLeftCoroutine = 0.25f;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        gameObject.transform.GetChild(0).gameObject.SetActive(false); // desactiva el hijo
+        gameObject.transform.GetChild(0).gameObject.SetActive(false); // Deactivate the first children (VFX effect)
     }
 
     public void TakeDamage()
@@ -18,13 +24,14 @@ public class DeathEnemiesController : MonoBehaviour
         StartCoroutine("VFXDeath");
     }
 
+    // Coroutine to see the VFX of the enemy
     private IEnumerator VFXDeath()
     {
-        GetComponent<SpriteRenderer>().enabled = false; // Asi se puede ver el efecto visual
-        Destroy(gameObject.GetComponent<BoxCollider2D>());
-        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Accede al hijo del objeto uq es el que tiene el efecto visual
-        _audioSource.PlayOneShot(enemyDeath);
-        yield return new WaitForSeconds(0.25f);
-        Destroy(gameObject); // Destruye ambos 
+        GetComponent<SpriteRenderer>().enabled = false; // Deactivate the sprite of the enemy
+        Destroy(gameObject.GetComponent<BoxCollider2D>()); // Deactivate the sprite of the enemy -> at this fomr the player doesn't collide with it
+        gameObject.transform.GetChild(0).gameObject.SetActive(true); // Access to the first children 
+        _audioSource.PlayOneShot(enemyDeath); // Activates the audioclip
+        yield return new WaitForSeconds(timeLeftCoroutine);
+        Destroy(gameObject); // Destroy both 
     }
 }

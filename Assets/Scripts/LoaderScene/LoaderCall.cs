@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class LoaderCall : MonoBehaviour
 {
+    // Call of the load scene
+
+    // Variable
     private bool firstUpdate = true;
-    private float sliderTimeLeft = 1.85f; // Time it takes for the slider to complete
+
+    // Coroutine's variable
+    private float animTimeLeft = 1.85f; // Time it takes for the animation
 
     private void Update()
     {
@@ -16,11 +21,10 @@ public class LoaderCall : MonoBehaviour
         }
     }
 
-    // Couroutine that visually lengthens the loading scene 
-
+    // Coroutine to make longer the load scene
     private IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(sliderTimeLeft);
+        yield return new WaitForSeconds(animTimeLeft);
         Loader.LoaderCallBack();
     }
 }

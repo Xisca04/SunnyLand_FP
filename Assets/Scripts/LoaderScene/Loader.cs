@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public static class Loader 
 {
-    // STATIC Class has its functions and variables STATICS
+    // To load the scenes with the Load Scene
 
     // Variable which saves a function with no outputs or inputs
     private static Action loaderCallbackAction; // DELEGATE
