@@ -36,10 +36,12 @@ public class GameOver : MonoBehaviour
     private IEnumerator GameOverCoroutine()
     {
         _playerController.Die(); // Player's die animation
+        _playerController.enabled = false; // At this form the player can't move
         yield return new WaitForSeconds(animTimeDie);
         gameOverPanel.SetActive(true); // Activates the game Over panel
         yield return new WaitForSeconds(timeToRealoadLevel);
         ReachedCheckpoint(); // Check if the player has passed the checkpoint
+        _playerController.enabled = true; // Then the player when restart the level can move
         gameOverPanel.SetActive(false); // Desactivates the game Over panel
         _playerController.DieOff(); // Desactivate the die's animation
     }
