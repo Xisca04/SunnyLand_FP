@@ -7,13 +7,12 @@ public class DeathEnemiesCounter : MonoBehaviour
 {
     // Counts every time the player kills an enemy
     [SerializeField] private PlayerController _playerController;
-    [SerializeField] private GameManager _gameManager;
     [SerializeField] private int enemyDeaths;
     [SerializeField] private TextMeshProUGUI enemyDeathsText;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private ParticleSystem _fireEmbersParticles;
 
-    private GameObject spawnEnemies;
+    [SerializeField] private GameObject enemies;
     
     private void Start()
     {
@@ -62,11 +61,15 @@ public class DeathEnemiesCounter : MonoBehaviour
         if (enemyDeaths >= 10)
         {
             winPanel.SetActive(true);
-            spawnEnemies = GameObject.FindGameObjectWithTag("SpawnEnemies");
-            Destroy(spawnEnemies);
-            Loader.Load(Loader.Scene.Level2);
-            _gameManager.Load();
+            Destroy(enemies);
+            StartCoroutine("WinLevel");
         }
+    }
+
+    private IEnumerator WinLevel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Loader.Load(Loader.Scene.Final_Level);
     }
 
     private IEnumerator LoseLevel()

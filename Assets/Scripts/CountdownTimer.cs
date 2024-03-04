@@ -11,6 +11,7 @@ public class CountdownTimer : MonoBehaviour
 
     public float timeLeft = 10f;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameOver _gameOver;
     private bool timerOn = false;
 
     public float timeToAdd = 5f;
@@ -49,6 +50,7 @@ public class CountdownTimer : MonoBehaviour
             {
                 timeLeft = 0;
                 timerOn = false;
+                _gameOver.GameOverLevels();
             }
 
             if (timeLeft < 5)

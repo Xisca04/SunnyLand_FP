@@ -110564,6 +110564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 10
   timerText: {fileID: 1167847927}
+  _gameOver: {fileID: 893367450}
   timeToAdd: 5
 --- !u!4 &1707707492
 Transform:

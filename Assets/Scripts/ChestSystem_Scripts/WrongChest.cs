@@ -21,6 +21,7 @@ public class WrongChest : MonoBehaviour
     {
         wrongChestPanel.SetActive(true);
         yield return new WaitForSeconds(2f);
+        wrongChestPanel.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
