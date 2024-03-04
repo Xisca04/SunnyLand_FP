@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class EndOfLevel : MonoBehaviour
 {
-    [SerializeField] private GameManager _gameManager;
     [SerializeField] private GameObject winPanel;
 
     private void Start()
@@ -24,19 +23,8 @@ public class EndOfLevel : MonoBehaviour
     private IEnumerator WonLevel()
     {
         winPanel.SetActive(true);
-        yield return new WaitForSeconds(1.0f);
-        _gameManager.chestCompleted = true;
-        ChargePlayerToCheckpoint();
-        // Vuelta al check point con la partida igual que la había dejado y el chest destruido
-    }
-
-    private void ChargePlayerToCheckpoint()
-    {
-        if (PlayerPrefs.HasKey("PlayerPositionX") && PlayerPrefs.HasKey("PlayerPositionY"))
-        {
-            Debug.Log($"al checkpoint");
-            Loader.Load(Loader.Scene.Level1);
-        }
+        yield return new WaitForSeconds(2.0f);
+        Loader.Load(Loader.Scene.Level2);
     }
 }
 

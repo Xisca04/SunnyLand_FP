@@ -12,7 +12,7 @@ public class LoaderScenes_ChSyst : MonoBehaviour
         Loader.Load(Loader.Scene.C_Final_Level);
     }
 
-    public void LoadChaseScene()
+    public void LoadLabyrinthScene()
     {
         Loader.Load(Loader.Scene.C_First_Level);
     }
