@@ -7,27 +7,28 @@ public class PlayerController : MonoBehaviour
 {
     // Controller of the player
 
-    public Rigidbody2D _rigidbody2D;
+    // To get the components
+    private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D boxCollider2D;
-    public Animator _animator;
+    private Animator _animator;
 
+    // Movement
     private float horizontalInput;
     public float runSpeed = 10f;
+
+    // Jump
     private float jumpForce = 8f;
-
+    public bool isJumping = false;
+    private bool isOnTheGround = true;
     [SerializeField] private float bounceJump = 5f;
-
     [SerializeField] private LayerMask groundLayerMask;
 
+    // Sound
     [SerializeField] private AudioClip[] playerSounds;
-
-    private bool isCrouching = true;
-    public bool isJumping = false;
-
-    private bool isOnTheGround = true;
     private AudioSource _audioSource;
 
+    // Get all the components for the Player's movement
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -44,7 +45,6 @@ public class PlayerController : MonoBehaviour
         isOnTheGround = IsOnTheGround();
         
         Jump();
-        Crouch();
     }
 
     private void FixedUpdate()
@@ -63,13 +63,13 @@ public class PlayerController : MonoBehaviour
         // Run
         if (move > 0f)
         {
-            // Girar personaje
+            // Turn Around the player
             _spriteRenderer.flipX = false;
             _animator.SetBool("Run", true);
         }
         else if (move < 0f)
         {
-            // Girar personaje
+            // Turn Around the player
             _spriteRenderer.flipX = true;
             _animator.SetBool("Run", true);
         }
@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
+        // Jump Animation
         if (IsOnTheGround() == true)
         {
             _animator.SetBool("Jump", false);
@@ -90,11 +91,12 @@ public class PlayerController : MonoBehaviour
             _animator.SetBool("Crouch", false);
         }
 
+        // Checks if the Player is on the ground and it pressed the sapce key
         if (Input.GetKeyDown(KeyCode.Space) && IsOnTheGround())
         {
             isJumping = true;
 
-            _rigidbody2D.velocity = Vector2.up * jumpForce; // dirección del vector vertical por la fuerza de slto = player salta
+            _rigidbody2D.velocity = Vector2.up * jumpForce; // Direction Vector Up * jump force = Jump Player
 
             _audioSource.PlayOneShot(playerSounds[0]);
         }
@@ -112,14 +114,14 @@ public class PlayerController : MonoBehaviour
 
 
     }
-    private bool IsOnTheGround() // Raycast
+    private bool IsOnTheGround() // Raycast to check if the Player is on the ground or not -> and if the player can jump or not
     {
         float extraHeightTest = 0.03f;
         RaycastHit2D raycastHit2D = Physics2D.Raycast(boxCollider2D.bounds.center, Vector2.down, boxCollider2D.bounds.extents.y + extraHeightTest, groundLayerMask);
 
         bool isOnTheGround = raycastHit2D.collider != null;
 
-        Color rayColor = isOnTheGround ? Color.green : Color.red; // Si está en el suelo el rayo será verde sino rojo
+        Color rayColor = isOnTheGround ? Color.green : Color.red; // The ray will be green if the Player is on the ground, if not it will be red
 
         Debug.DrawRay(boxCollider2D.bounds.center,
              Vector2.down * (boxCollider2D.bounds.extents.y + extraHeightTest), rayColor);
@@ -127,51 +129,38 @@ public class PlayerController : MonoBehaviour
         return isOnTheGround;
     }
 
-    public bool CheckJump()
+    public bool CheckJump() // Make sure if the Player is jumping
     {
         return isJumping;
     }
 
+    // For kill the enemies --> the Player will make the rebounce
     public void BounceJump()
     {
         _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, bounceJump);
     }
 
-    // Agacharse
-    private void Crouch()
-    {
-        if (Input.GetButton("Fire1")) // Manteniendo botón dch ratón --> está agachado y puede moverse también
-        {
-            isCrouching = !isCrouching;
-            
-            if (isCrouching)
-            {
-                _animator.SetBool("Crouch", true);
-            }
-        }
-        else
-        {
-            _animator.SetBool("Crouch", false);
-        }
-    }
 
+    // Activates the Die's animation and play the death sound
     public void Die()
     {
         _animator.SetBool("Die", true);
         _audioSource.PlayOneShot(playerSounds[1]);
     }
 
+    // Deactivates the Die's animation
     public void DieOff()
     {
         _animator.SetBool("Die", false);
     }
 
-    public Vector3 GetPosition() // devuelve la posición del player en ese momento
+    // For the checkpoint system
+    public Vector3 GetPosition() // Return the Player's position
     {
         return transform.position;
     }
 
-    public void SetPosition(Vector3 newPosition) // tomará la posición del player y la cambiará por una que entrará como parámetro
+    public void SetPosition(Vector3 newPosition) // Get the Player's position and then will change for another
     {
         transform.position = newPosition;
     }

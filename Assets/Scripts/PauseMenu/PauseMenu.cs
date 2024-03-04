@@ -8,32 +8,30 @@ public class PauseMenu : MonoBehaviour
 {
     // Pause Menu
 
+    // UI
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button mainMenuButton;
 
     private void Awake()
     {
+        // Programming the buttons by code
         mainMenuButton.onClick.AddListener(() => { Time.timeScale = 1f; Loader.Load(Loader.Scene.MainMenu);});
         resumeButton.onClick.AddListener(ResumeGame);
     }
 
-
     public void Show()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true); // Show the PausePanel
     }
 
     public void Hide()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); // Hide the PausePanel
     }
 
-
-    // Game's configuration if the Pause Menu is Off
     private void ResumeGame()
     {
-        Time.timeScale = 1.0f; // TAMPOCO FUNCIONA CON TIME SCALE
+        Time.timeScale = 1.0f; 
         Hide();
-        // SoundManager.PlaySound(SoundManager.Sound.ButtonOver);
     }
 }

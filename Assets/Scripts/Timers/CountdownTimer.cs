@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class CountdownTimer : MonoBehaviour
 {
-    // Countdown for the final and the bonus level
+    // Countdown for the Final Level
 
     public static CountdownTimer Instance { get; private set; }  // Singleton
 
+    // Timer
     public float timeLeft = 10f;
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private GameOver _gameOver;
     private bool timerOn = false;
-
     public float timeToAdd = 5f;
+
+    // UI
+    [SerializeField] private TextMeshProUGUI timerText;
+
+    // Reference
+    [SerializeField] private GameOver _gameOver;
+
 
     private void Awake() // Singleton
     {
@@ -53,7 +58,7 @@ public class CountdownTimer : MonoBehaviour
                 _gameOver.GameOverLevels();
             }
 
-            if (timeLeft < 5)
+            if (timeLeft < 5) // Turn to red the timer text
             {
                 timerText.color = Color.red;
             }

@@ -9,6 +9,7 @@ public class ScoreUI : MonoBehaviour
     // UI Score
     public static ScoreUI Instance { get; private set; }  // Singleton
 
+    // UI
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private void Awake()
@@ -19,9 +20,9 @@ public class ScoreUI : MonoBehaviour
         }
 
         Instance = this;
-        
     }
 
+    // Updates the text visually
     public void UpdateScore(int score)
     {
         scoreText.text = score.ToString();

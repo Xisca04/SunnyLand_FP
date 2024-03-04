@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MovementPlatform : MonoBehaviour
 {
+    // Movement of the movement's platforms
+
+    // Move
     [SerializeField] private Transform[] movementPoints;
     [SerializeField] private float moveSpeed;
-
     private int nextPoint = 1;
     private bool pointsOrder = true;
 
@@ -15,6 +17,7 @@ public class MovementPlatform : MonoBehaviour
         Movement();
     }
 
+    // Platforms move to the points of the array in order
     private void Movement()
     {
         if (pointsOrder && nextPoint + 1 >= movementPoints.Length)
@@ -43,6 +46,7 @@ public class MovementPlatform : MonoBehaviour
          moveSpeed * Time.deltaTime);
     }
 
+    // If the Player collisions with the platform --> the platform takes the player with it
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -51,6 +55,7 @@ public class MovementPlatform : MonoBehaviour
         }
     }
 
+    // When the player exits the collision --> the platfrom deactivate the set parent for the player
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))

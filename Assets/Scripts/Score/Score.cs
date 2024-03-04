@@ -6,10 +6,12 @@ using System;
 
 public class Score: MonoBehaviour
 {
-    // Score of the player
+    // Player's score
 
+    // Score counter
     private  int score;
-    // Score colectables
+
+    // Score collectables
     public const int GEM_SCORE = 100;
     public const int CHERRY_SCORE = 50;
 
@@ -26,9 +28,8 @@ public class Score: MonoBehaviour
 
     public void AddScore(int pointsToAdd)
     {
-        score += pointsToAdd;
-        Debug.Log($"{pointsToAdd}");
-        ScoreUI.Instance.UpdateScore(score);
+        score += pointsToAdd; // Add the respective score
+        ScoreUI.Instance.UpdateScore(score); // Updates visually the score (from ScoreUI)
     }
 
     

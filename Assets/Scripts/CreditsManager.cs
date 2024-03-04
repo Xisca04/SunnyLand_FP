@@ -6,14 +6,20 @@ using UnityEngine.UI;
 
 public class CreditsManager : MonoBehaviour
 {
-    // panel winner --> tiempo --> creditos
+    // Credits system -> animation Winner --> Credits + MainMenu button
 
+    // UI
     [SerializeField] private GameObject winnerPanel;
     [SerializeField] private GameObject credits;
     [SerializeField] private Button mainMenuButton;
+
+    // Particles
     [SerializeField] private ParticleSystem starsParticles;
 
-    private void Start()
+    // Coroutine's variable
+    private float timeLeftCoroutine = 6.5f;
+
+    private void Start() // By default shows the winner animation and the particles
     {
         mainMenuButton.onClick.AddListener(GoToMainMenu);
         winnerPanel.SetActive(true);
@@ -23,15 +29,16 @@ public class CreditsManager : MonoBehaviour
         StartCoroutine("WinnerPanel");
     }
 
-    private IEnumerator WinnerPanel()
+    private IEnumerator WinnerPanel() // After a while -> deactivate the winner animation and the particles -> Activate the credits and the MainMenu button
     {
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(timeLeftCoroutine);
         winnerPanel.SetActive(false);
         starsParticles.Stop();
         credits.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
     }
 
+    // Load the Main Menu
     private void GoToMainMenu()
     {
         Loader.Load(Loader.Scene.MainMenu);
