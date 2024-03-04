@@ -12,8 +12,6 @@ public class RecollectSystem : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject warningPanel;
 
-    [SerializeField] private GameManager _gameManager;
-
     private void Start()
     {
         applesCollected = 0;
@@ -48,7 +46,7 @@ public class RecollectSystem : MonoBehaviour
             }
             else if (applesCollected < 10)
             {
-                warningPanel.SetActive(true);
+                StartCoroutine("WarningPanel");
             }
         }
     }
@@ -63,7 +61,7 @@ public class RecollectSystem : MonoBehaviour
         winPanel.SetActive(true);
         warningPanel.SetActive(false); // aseguro que se desactive
         yield return new WaitForSeconds(3f);
-        GoToCheckpoint();
+        Loader.Load(Loader.Scene.MainMenu);
     }
 
     private IEnumerator LoseLevel()
@@ -71,19 +69,13 @@ public class RecollectSystem : MonoBehaviour
         losePanel.SetActive(true);
         warningPanel.SetActive(false); // aseguro que se desactive
         yield return new WaitForSeconds(3f);
-        Loader.Load(Loader.Scene.Level2);
+        Loader.Load(Loader.Scene.MainMenu);
     }
 
-    private IEnumerator WarninPanel()
+    private IEnumerator WarningPanel()
     {
         warningPanel.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         warningPanel.SetActive(false);
-    }
-
-    private void GoToCheckpoint()
-    {
-        Loader.Load(Loader.Scene.Level2);
-        _gameManager.Load();
     }
 }

@@ -21,9 +21,8 @@ public static class Loader
         Final_Level,
         C_First_Level,
         C_Cave_Level,
-        C_Race_Level,
         C_Final_Level,
-        Bonus_Level,
+        Minigame,
         CreditsScene,
 
     }

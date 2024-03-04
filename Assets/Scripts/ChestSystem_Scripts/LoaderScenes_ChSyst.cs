@@ -22,11 +22,6 @@ public class LoaderScenes_ChSyst : MonoBehaviour
         Loader.Load(Loader.Scene.C_Cave_Level);
     }
 
-    public void LoadRaceScene()
-    {
-        Loader.Load(Loader.Scene.C_Race_Level);
-    }
-
     public void LoadSecondLevel()
     {
         Loader.Load(Loader.Scene.Level2);

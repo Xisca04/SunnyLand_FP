@@ -22,7 +22,7 @@ public class MainMenuManager : MonoBehaviour
      
         instructionsButton.onClick.AddListener(ShowInstructionsPanel);
 
-        bonusLevelButton.onClick.AddListener(GoToBonusLevel);
+        bonusLevelButton.onClick.AddListener(GoToMinigame);
 
         quitButton.onClick.AddListener(Application.Quit);
 
@@ -46,8 +46,8 @@ public class MainMenuManager : MonoBehaviour
         Loader.Load(Loader.Scene.Level1);
     }
 
-    private void GoToBonusLevel()
+    private void GoToMinigame()
     {
-        Loader.Load(Loader.Scene.Bonus_Level);
+        Loader.Load(Loader.Scene.Minigame);
     }
 }
