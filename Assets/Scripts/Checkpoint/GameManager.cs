@@ -4,51 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // Saves and loads the Player's position
+
+    // Reference
     [SerializeField] PlayerController _playerController;
 
     // Son constantes porque nunca van a cambiar
     private const string PLAYER_POS_X = "PlayerPositionX";
     private const string PLAYER_POS_Y = "PlayerPositionY";
 
-    private bool firstTime = true;
-    public bool chestCompleted = false;
-
-    private void Start()
-    {
-        if(chestCompleted == false)
-        {
-            DeleteKeyPlayer();
-        }
-        else if(chestCompleted == true)
-        {
-            Load();
-        }
-    }
-
-    private void DeleteKeyPlayer()
-    {
-        PlayerPrefs.DeleteKey("PlayerPositionX");
-        PlayerPrefs.DeleteKey("PlayerPositionX");
-        firstTime = true;
-    }
-
+    // Save the Player's position
     public void Save()
     {
-        Debug.Log($"Save");
-        // GUARDAR POSICIÓN --> Accedemos a player prefs hacemos persitentes 2 datos --> posX y posY del Player --> SE HAN DE HACER SI O SI POR SEPARADAS
-        Vector3 pos = _playerController.GetPosition(); // Accede a la posición del player
-        PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x);
-        PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y);
-        firstTime = false;
-        Debug.Log($"{pos}");
+        Vector3 pos = _playerController.GetPosition(); // Access to the Player's position
+        // We make 2 data persistence
+        PlayerPrefs.SetFloat(PLAYER_POS_X, pos.x); // X Position
+        PlayerPrefs.SetFloat(PLAYER_POS_Y, pos.y); // Y Positino
     }
 
+    // Load the saved position
     public void Load()
     {
-        Debug.Log($"Load");
-        // Position
-        float x = PlayerPrefs.GetFloat(PLAYER_POS_X,0);
-        float y = PlayerPrefs.GetFloat(PLAYER_POS_Y, 0);
-        _playerController.SetPosition(new Vector3(x, y, 0));
+        float x = PlayerPrefs.GetFloat(PLAYER_POS_X,0); // Loacate the X position saved
+        float y = PlayerPrefs.GetFloat(PLAYER_POS_Y, 0); // Loacate the Y position saved
+        _playerController.SetPosition(new Vector3(x, y, 0)); // Load both position to the Player's position
     }
 }

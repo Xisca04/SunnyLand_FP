@@ -5,14 +5,25 @@ using TMPro;
 
 public class DeathEnemiesCounter : MonoBehaviour
 {
-    // Counts every time the player kills an enemy
+    // Cave challenge --> counts every time the Player kills an enemy
+    
+    // Reference
     [SerializeField] private PlayerController _playerController;
-    [SerializeField] private int enemyDeaths;
+
+    // Counter's variables
+    [SerializeField] private int enemyDeaths; // Number of enemies killed
+    [SerializeField] private GameObject enemies; // Game object that contents all of the enemies in the scene
+
+    // Coroutine's variable
+    private float timeLeftCroutine = 1.5f;
+
+    // UI
     [SerializeField] private TextMeshProUGUI enemyDeathsText;
     [SerializeField] private GameObject winPanel;
+
+    // Particles
     [SerializeField] private ParticleSystem _fireEmbersParticles;
 
-    [SerializeField] private GameObject enemies;
     
     private void Start()
     {
@@ -26,23 +37,22 @@ public class DeathEnemiesCounter : MonoBehaviour
         CheckWinner();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) // detecta si es un enemigo a lo que toca por debajo de él, pero si toca este que no sea desde arriba el enemigo mata al player
+    private void OnCollisionEnter2D(Collision2D collision) 
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy")) // Detect if the game object has the Enemy tag
         {
-            // Obtener la dirección del contacto
+            // Get the direction of the contact
             ContactPoint2D contact = collision.contacts[0];
             Vector2 normal = contact.normal;
 
-            if (Vector2.Dot(Vector2.up, normal) > 0.5f)
+            if (Vector2.Dot(Vector2.up, normal) > 0.5f) // If the direction's contact is up
             {
-                _playerController.ReboteJump();
-                collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage();
-                EnemyKilled();
+                _playerController.BounceJump(); // The player makes the rebounce
+                collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage(); // Kill the enemy
+                EnemyKilled(); // Update the counter
             }
-            else // Si el jugador choca con el enemigo desde los lados o por debajo, recibe daño
+            else // If the player collisions with the enemy from the sides or below --> GameOver 
             {
-                Debug.Log($"empiezas el nivel 2 de 0");
                 gameObject.GetComponent<GameOver>().gameOverPanel.SetActive(true);
                 _playerController.Die();
                 StartCoroutine("LoseLevel");
@@ -50,31 +60,35 @@ public class DeathEnemiesCounter : MonoBehaviour
         }
     }
 
+    // Updates the counter internally and visually
     private void EnemyKilled()
     {
         enemyDeaths++;
         enemyDeathsText.text = enemyDeaths.ToString();
     }
 
+    // Checks if the player has won --> if the player have killed 10 enemies or more
     private void CheckWinner()
     {
         if (enemyDeaths >= 10)
         {
             winPanel.SetActive(true);
-            Destroy(enemies);
+            Destroy(enemies); // Destroy all enemies from the scene -> avoids the problem of the player touching an enemy again and triggering the Game Over
             StartCoroutine("WinLevel");
         }
     }
 
+    // Coroutine that sends the Player to the Final Level
     private IEnumerator WinLevel()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Final_Level);
     }
 
+    // Coroutine that sends the Player to restart the Level 2
     private IEnumerator LoseLevel()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Level2);
     }
 }

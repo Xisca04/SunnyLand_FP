@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoaderScenes_ChSyst : MonoBehaviour
 {
-    // Load the scenes for the chest system
+    // Load the scenes for the Chest System -> UI Buttons 
 
     public void LoadFinalScene()
     {

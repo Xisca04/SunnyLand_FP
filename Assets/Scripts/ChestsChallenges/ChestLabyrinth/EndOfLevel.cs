@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class EndOfLevel : MonoBehaviour
 {
+    // Labyrinth challenge --> Check if the Player collisions with the flag
+
+    // Variables of the coroutine
+    private float timeLeftCroutine = 2;
+
+    // UI
     [SerializeField] private GameObject winPanel;
 
     private void Start()
@@ -16,14 +22,15 @@ public class EndOfLevel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            StartCoroutine("WonLevel");
+            StartCoroutine("WonLevel"); // Initialize the coroutine of overcomed the challenge
         }
     }
 
+    // Activates the win panel and sends the player to the Level 2
     private IEnumerator WonLevel()
     {
         winPanel.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Level2);
     }
 }

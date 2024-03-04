@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class FinalChest : MonoBehaviour
 {
-    // Chest system -> collision --> animación --> scene --> panel explicativo
+    // Final Chest of the Final Level
+
+    // Variable of the croutine
+    private float timeLeftCroutine = 0.3f;
+
+    // Particles
     [SerializeField] private ParticleSystem _particles;
+
+    // To get the component
     private Animator _anim;
 
     private void Start()
@@ -15,11 +22,11 @@ public class FinalChest : MonoBehaviour
         _particles.Stop();
     }
 
+    // If the Player collisions with the chest -> activates the chest' animation and send the player to the scene
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Chest found");
             _anim.SetBool("IsOpened", true);
             _particles.Play();
             StartCoroutine("SendPlayer");
@@ -27,9 +34,10 @@ public class FinalChest : MonoBehaviour
 
     }
 
+    // Sends the player to the Final Challenge Chest
     private IEnumerator SendPlayer()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.C_Final_Level);
     }
 }

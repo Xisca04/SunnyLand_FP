@@ -31,7 +31,7 @@ public class DeathController : MonoBehaviour
              * */
             if (Vector2.Dot(Vector2.up, normal) > 0.5f)
             {
-                _playerController.ReboteJump();
+                _playerController.BounceJump();
                 collision.gameObject.GetComponent<DeathEnemiesController>().TakeDamage();
 
                 if (collision.gameObject.CompareTag("Enemy_Easy"))

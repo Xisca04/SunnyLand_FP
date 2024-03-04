@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 10f;
     private float jumpForce = 8f;
 
-    [SerializeField] private float rebotejump = 5f;
+    [SerializeField] private float bounceJump = 5f;
 
     [SerializeField] private LayerMask groundLayerMask;
 
@@ -132,9 +132,9 @@ public class PlayerController : MonoBehaviour
         return isJumping;
     }
 
-    public void ReboteJump()
+    public void BounceJump()
     {
-        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, rebotejump);
+        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, bounceJump);
     }
 
     // Agacharse
