@@ -81,14 +81,18 @@ public class DeathEnemiesCounter : MonoBehaviour
     // Coroutine that sends the Player to the Final Level
     private IEnumerator WinLevel()
     {
+        _playerController.enabled = false; // At this form the player can't move
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Final_Level);
+        _playerController.enabled = true;
     }
 
     // Coroutine that sends the Player to restart the Level 2
     private IEnumerator LoseLevel()
     {
+        _playerController.enabled = false; // At this form the player can't move
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Level2);
+        _playerController.enabled = true;
     }
 }

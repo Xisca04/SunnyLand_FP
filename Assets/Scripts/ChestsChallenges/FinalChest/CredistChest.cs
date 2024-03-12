@@ -18,6 +18,9 @@ public class CredistChest : MonoBehaviour
     // To get the component
     private Animator _anim;
 
+    // Reference
+    [SerializeField] private PlayerController _playerController;
+
     private void Start()
     {
         _anim = GetComponent<Animator>();
@@ -63,16 +66,20 @@ public class CredistChest : MonoBehaviour
     // Lose the level --> send the player to restart the Final Level
     private IEnumerator SendAndRepeatLevel()
     {
+        _playerController.enabled = false; // At this form the player can't move
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Final_Level);
+        _playerController.enabled = true; 
     }
 
     // Lose the level if time's up --> restart the Final Level
     private IEnumerator TimeIsUp()
     {
+        _playerController.enabled = false; // At this form the player can't move
         timeIsUpPanel.SetActive(true);
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Final_Level);
+        _playerController.enabled = true; 
     }
 
 }

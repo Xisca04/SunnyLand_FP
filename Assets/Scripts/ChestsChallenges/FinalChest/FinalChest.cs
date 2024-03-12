@@ -16,6 +16,9 @@ public class FinalChest : MonoBehaviour
     // To get the component
     private Animator _anim;
 
+    // Reference
+    [SerializeField] private PlayerController _playerController;
+
     private void Start()
     {
         _anim = GetComponent<Animator>();
@@ -37,7 +40,9 @@ public class FinalChest : MonoBehaviour
     // Sends the player to the Final Challenge Chest
     private IEnumerator SendPlayer()
     {
+        _playerController.enabled = false;
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.C_Final_Level);
+        _playerController.enabled = true;
     }
 }

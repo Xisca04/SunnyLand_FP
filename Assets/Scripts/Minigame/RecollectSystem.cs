@@ -21,12 +21,16 @@ public class RecollectSystem : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject warningPanel;
 
+    // Reference
+    [SerializeField] private PlayerController _playerController;
+
     private void Start()
     {
         applesCollected = 0;
         winPanel.SetActive(false);
         losePanel.SetActive(false);
         warningPanel.SetActive(false);
+
     }
 
     private void Update()
@@ -69,9 +73,11 @@ public class RecollectSystem : MonoBehaviour
     private IEnumerator WinLevel()
     {
         winPanel.SetActive(true);
+        _playerController.enabled = false;
         warningPanel.SetActive(false); // Make sure it is deactivated
         yield return new WaitForSeconds(timeLeftCoroutine);
         Loader.Load(Loader.Scene.MainMenu);
+        _playerController.enabled = true;
     }
 
     // If the player lose --> goes to the MainMenu

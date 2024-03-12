@@ -13,6 +13,9 @@ public class EndOfLevel : MonoBehaviour
     // UI
     [SerializeField] private GameObject winPanel;
 
+    // Reference
+    [SerializeField] private PlayerController _playerController;
+
     private void Start()
     {
         winPanel.SetActive(false);
@@ -30,8 +33,10 @@ public class EndOfLevel : MonoBehaviour
     private IEnumerator WonLevel()
     {
         winPanel.SetActive(true);
+        _playerController.enabled = false;
         yield return new WaitForSeconds(timeLeftCroutine);
         Loader.Load(Loader.Scene.Level2);
+        _playerController.enabled = true;
     }
 }
 
